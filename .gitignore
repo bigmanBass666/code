@@ -38,3 +38,5 @@
 **/*.7z
 **/*.gz
 **/*.bz2
+
+Front End/projects/*
