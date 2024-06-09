@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fuck</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      row-gap: 2vh;
+
+      height: 100vh;
+    }
+
+    select,
+    input {
+      width: 20vw;
+      height: 4vh;
+
+      border-radius: 8px;
+      font-size: 1.2em;
+    }
+
+    input {
+      outline: none;
+      border-width: 1px;
+    }
+
+    select {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <select name="" id="grade">
+    <option value="0">grade</option>
+    <option value="1">grade 1</option>
+    <option value="2">grade 2</option>
+    <option value="3">grade 3</option>
+  </select>
+
+  <select name="" id="class_">
+    <option value="0">class</option>
+  </select>
+  <input type="text" id="a">
+  <input type="text" id="b">
+
+  <script>
+    $(function () {
+      $('#a').on('input', function () {
+        $('#b').val($(this).val())
+      })
+    })
+  </script>
+</body>
+
+</html>

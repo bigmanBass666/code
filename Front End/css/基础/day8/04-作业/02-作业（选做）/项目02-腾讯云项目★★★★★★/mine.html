@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            height: 40px;
+            background-color: #2b303b;
+        }
+
+        .header .left {
+            float: left;
+        }
+
+        .header .logo {
+            margin-bottom: 5px;
+        }
+
+        .header .right {
+            float: right;
+        }
+
+        .header .right li {
+            float: left;
+            line-height: 40px;
+        }
+
+        .header .right li a {
+            color: #fff;
+        }
+
+        .banner {
+            height: 486px;
+            background-color: #181c28;
+        }
+
+        .banner .wrapper {
+            position: relative;
+        }
+
+        .banner ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #1b2a3f;
+            padding: 40px 20px 0;
+            line-height: 40px;
+        }
+
+        .banner ul span {
+            float: right;
+        }
+
+        .banner ul a {
+            color: #fff;
+        }
+
+        .box {
+            margin-top: 45px;
+        }
+
+        .box .head {
+            text-align: center;
+        }
+
+        .box .head h3 {
+            margin-top: 25px;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .box .head h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .course {
+            margin: 30px auto 140px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 50px;
+            height: 460px;
+        }
+
+        .course .left {
+            float: left;
+            width: 440px;
+        }
+
+        .course .left h2 {
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            font-size: 26px;
+            font-weight: normal;
+        }
+
+        .course .left p {
+            margin-top: 20px;
+            color: #666;
+            font-size: 11px;
+            line-height: 35px;
+        }
+
+        .course .left a {
+            display: inline-block;
+            margin-top: 30px;
+            width: 160px;
+            height: 50px;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            color: #000;
+            transition: all .3s;
+        }
+
+        .course .left a:hover {
+            background-color: #ffa500;
+            color: #fff;
+        }
+
+        .course .right img {
+            float: right;
+            height: 350px;
+        }
+
+        .footer {
+            padding-top: 35px;
+            height: 400px;
+            background-color: #2e3033;
+            color: #ccc;
+        }
+
+        .footer dl {
+            float: left;
+            margin-right: 130px;
+        }
+
+        .footer dt {
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .footer dd {
+            font-size: 12px;
+        }
+
+        .footer .right {
+            float: right;
+            color: #ccc;
+        }
+
+        .footer .right p {
+            margin-bottom: 25px;
+            width: 145px;
+            font-size: 10px;
+            line-height: 24px;
+        }
+
+        .footer .right a {
+            display: inline-block;
+            background-color: #00a4ff;
+            width: 190px;
+            height: 35px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 11px;
+            text-align: center;
+            line-height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <div class="left">
+                <h1><a><img src="./images/logo.png" alt="" class="logo"></a></h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem &nbsp;| &nbsp;</a></li>
+                    <li><a href="#">&nbsp;lorem</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                    <li><a href="#">Lorem<span>&gt</span></a></li>
+                </ul>
+            </div>
+            <div class="right"><img src="./images/banner.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="box wrapper">
+        <div class="head">
+            <h2> 云从业者培训及认证 </h2>
+            <h3> 好好学习，天天向上 </h3>
+        </div>
+
+        <div class="course wrapper">
+            <div class="left">
+                <h2>在线课程</h2>
+                <p>
+                    本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频
+                </p>
+                <a href="#">开始学习</a>
+            </div>
+            <div class="right">
+                <img src="./images/right.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="left">
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                </dl>
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                </dl>
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                </dl>
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                </dl>
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                    <dd>Lorem</dd>
+                </dl>
+            </div>
+            <div class="right">
+                <p> Copyright © 2013 - 2020<br>Tencent Cloud. All Rights Reserved.<br>腾讯云 版权所有</p>
+                <a href="#">购买咨询</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

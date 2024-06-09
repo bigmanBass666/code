@@ -1,0 +1,51 @@
+{
+  "entryPagePath": "pages/cate/cate",
+  "pages": [
+    "pages/index/index",
+    "pages/cate/cate",
+    "pages/cart/cart",
+    "pages/profile/profile",
+    "pages/list/list",
+    "pages/event/event",
+    "pages/grammar/grammar",
+    "pages/grammar/update_obj/update_obj",
+    "pages/grammar/update_arr/update_arr",
+    "components/nav-collapse/nav-collapse"
+  ],
+  "window": {
+    "navigationBarTitleText": "NOTE",
+    "navigationBarBackgroundColor": "#b4edc0",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "/image/mint_green-r.png",
+        "selectedIconPath": "/image/pink-r.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "cate",
+        "iconPath": "/image/mint_green-r.png",
+        "selectedIconPath": "/image/pink-r.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "cart",
+        "iconPath": "/image/mint_green-r.png",
+        "selectedIconPath": "/image/pink-r.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "profile",
+        "iconPath": "/image/mint_green-r.png",
+        "selectedIconPath": "/image/pink-r.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

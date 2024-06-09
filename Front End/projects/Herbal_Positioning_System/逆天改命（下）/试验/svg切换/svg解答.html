@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg展示</title>
+</head>
+
+<body>
+    <!-- # 好的，您可以参照下面的步骤来实现您的需求：
+    # 1. 在HTML文件中添加一个切换搜索模式的按钮，使用一个`button`标签，并给它一个独特的ID，让我们假设它的ID是`search-mode-toggle`。
+    # ```html -->
+    <button id="search-mode-toggle">
+        <svg id="search-mode-icon"></svg>
+    </button>
+    <!-- 2. 在您的JavaScript代码中，定义一个计数器`count`，用于跟踪每次按下按钮的次数，根据计数器的奇偶性来切换搜索模式。 -->
+    <script type="text/javascript">
+        let count = 0
+        document.getElementById("search-mode-toggle").addEventListener("click", function () {
+            count++
+            <!-- // 在这里编写搜索模式的切换代码 -->
+        })
+
+        // 贴上一些示例svg代码以显示如何在按钮上显示这些图片（假设这里有一个 < svg > 元素来显示A图，另一段SVG代码显示B图）
+        const imgA = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24"stroke - width="1.5" stroke = "#f5f5f5" fill = "none" stroke - linecap="round" stroke - linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg >'
+        const imgB = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d = "M18.2916 7.29294C17.9013 6.90262 17.2678 6.90262 16.8775 7.29294L11.999 12.1716L7.12091 7.29348C6.73179 6.90436 6.09822 6.90436 5.70909 7.29348C1.50278 11.4998 1.50278 18.5083 5.70909 22.7146C6.09822 23.1037 6.73179 23.1037 7.12091 22.7146L11.999 17.8365L16.8775 22.7147C17.2666 23.1038 17.9002 23.1038 18.2893 22.7147C22.4956 18.5083 22.4956 11.4998 18.2916 7.29294Z" ></path></svg>'
+
+        // 3. 在切换搜索模式的按钮的回调函数中，使用一个`if ...else
+        // `语句根据计数器的奇偶性来切换搜索模式。在每个分支中，调用函数`A`或`B`以激活相应的搜索方式。同时根据当前的搜索方式来替换按钮上的svg图片。
+        document.getElementById("search-mode-toggle").addEventListener("click", function () {
+            count++
+            let searchMode = document.getElementById("search-mode")
+            // 用于存储当前搜索模式的状态，假设其ID为search-mode
+            if (count % 2 === 1) { // 当计数器为奇数时使用搜索A
+                A()
+                searchMode.innerHTML = "当前搜索模式：A"
+                // 更新搜索模式的状态
+                document.getElementById("search-mode-icon").innerHTML = imgA
+                // 更新切换按钮上的svg图片
+            } else {// 当计数器为偶数时使用搜索B
+                B()
+                searchMode.innerHTML = "当前搜索模式：B"
+                document.getElementById("search-mode-icon").innerHTML = imgB
+            }
+        });
+
+    </script>
+</body>
+
+</html>

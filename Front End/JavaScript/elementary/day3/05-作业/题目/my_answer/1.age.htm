@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let ages = []
+
+    // * 需求1：让用户输入五个有效年龄（0-100之间），**放入数组中**
+    // * 必须输入五个有效年龄年龄，如果是无效年龄，则不能放入数组中
+    while (ages.length < 5) {
+      let age = +prompt(`${ages.length + 1}. Enter the age:`)
+      if (age >= 0 && age <= 100) {
+        ages.push(age)
+        continue
+      }
+      alert(`Invalid age ${age}. Please try again.`)
+    }
+
+    printArr(ages)
+    document.write('<br>')
+    adultAges(ages)
+    document.write('<br>')
+    printTotalAge(ages)
+    document.write('<br>')
+    printAverageAge(ages)
+    document.write('<br>')
+    printMaxAndMin(ages)
+
+    // * 需求2：打印出所有成年人的年龄 (数组筛选)
+    function adultAges(arr) {
+      document.write('The ages of adult: ')
+      for (let i = 0; i < ages.length; i++) {
+        if (arr[i] >= 18) {
+          document.write(arr[i] + ' ')
+        }
+      }
+    }
+
+    // * 需求3：打印出所有人总年龄 （累加）
+    function printTotalAge(arr) {
+      let sum = arr[0]
+      for (let i = 1; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      document.write(`The total ages of everyone: ${sum}`)
+    }
+
+    // * 需求4：打印出所有人的平均年龄 （累加）
+    function printAverageAge(arr) {
+      let sum = 0
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      document.write(`The average age of everyone: ${sum / arr.length}`)
+    }
+
+    // * 需求5：打印出最大年龄和最小年龄 （最大值）
+    function printMaxAndMin(arr) {
+      let max = arr[0]
+      let min = arr[0]
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i]
+        }
+        if (arr[i] < min) {
+          min = arr[i]
+        }
+      }
+      document.write(`The maximum and minimum ages are: ${max}, ${min}`)
+    }
+
+
+    function printArr(arr) {
+      document.write('[ ')
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + ', ')
+      }
+      document.write(' ]')
+    }
+  </script>
+</body>
+
+</html>

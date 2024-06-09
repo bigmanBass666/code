@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：让用户输入自己的名字、年龄、性别，再输出到网页分析：
+    // 1：弹出 输入 框（prompt）：请输入您的姓名（uname）：用变量保存起来。
+    // 2：弹出输入框(prompt) ： 请输入您的年龄(age)：用变量保存起来。
+    // 3：弹出输入框（prompt) ： 请输入您的性别(gender)：用变量保存起来。
+    // 4:页面分别输出(document.write)刚才的3个变量。 -->
+    let name = prompt("Enter the name:")
+    let age = prompt("Enter the age:")
+    let gender = prompt("Enter the gender:")
+    document.write("Your name: " + name)
+    document.write("<br>")
+    document.write("Your age: " + age)
+    document.write("<br>")
+    document.write("Your gender: " + gender)
+  </script>
+</body>
+
+</html>

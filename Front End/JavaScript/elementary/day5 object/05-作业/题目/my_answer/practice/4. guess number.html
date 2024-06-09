@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 猜数字游戏，设定次数，最多猜8次
+    let count = 3
+    let randomNum = Math.floor(Math.random() * (10 + 1)) + 1
+    let isGuessed = false
+    while (count) {
+      let userNum = +prompt('Enter a number:')
+      count--
+      if (userNum > randomNum) {
+        alert(`Too big. You have ${count} more chances.`);
+      } else if (userNum < randomNum) {
+        alert(`Too small. You have ${count} more chances.`);
+      } else {
+        alert(`You guessed the number ${randomNum}. You remaining times are: ${count}.`);
+        isGuessed = true
+        break
+      }
+      // alert(randomNum);
+    }
+    if (count === 0 && !isGuessed) {
+      alert(`The number is ${randomNum}.`)
+    }
+  </script>
+</body>
+
+</html>

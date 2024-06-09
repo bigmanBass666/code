@@ -1,0 +1,143 @@
+@import "./iconfont/iconfont.scss";
+
+$code-bgc: #f0f0f0;
+
+// configuration
+page {
+    padding: 25rpx;
+
+    font-size: 32rpx;
+
+    box-sizing: border-box;
+
+    // 自适应
+    button {
+        border-radius: 8rpx;
+        font-size: 34rpx;
+        font-weight: 700;
+        line-height: 1.41176471;
+        padding: 16rpx 48rpx;
+
+        &:not([size="mini"]) {
+            width: 368rpx;
+        }
+    }
+}
+
+// utility
+.mt-15 {
+    margin-top: 15rpx;
+}
+
+.bs-shadow {
+    --bs-shadow-color: #b4edc0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-shadow-color), .5);
+}
+
+.focus-fill {
+    @extend .bs-shadow;
+
+    --focus-fill-color: #b4edc0;
+    --focus-fill-bgc: var(--focus-fill-color);
+    --focus-fill-bdc: var(--focus-fill-color);
+
+    background-color: var(--focus-fill-bgc);
+
+    border-color: var(--focus-fill-bdc);
+}
+
+// mixin
+@mixin text-tag($text) {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 15rpx;
+        top: 15rpx;
+
+        content: $text;
+    }
+
+}
+
+@mixin content-bgc($background-color) {
+    padding: 75rpx;
+    border-radius: 10rpx;
+
+    background-color: $background-color;
+}
+
+// note style
+.note-item {
+    &:nth-child(n+2) {
+        margin-top: 50rpx;
+    }
+
+
+    .content-bgc {
+        margin-top: 15rpx;
+
+        &.pd-sm {
+            padding: 40rpx;
+        }
+    }
+
+    .title {
+        text-align: center;
+
+        font: {
+            weight: 300;
+            size: 45rpx;
+        }
+
+        ;
+    }
+
+    .code,
+    .tips {
+        margin-top: 30rpx;
+        border-radius: inherit;
+
+        background-color: $code-bgc;
+    }
+
+    .code {
+        display: block;
+
+        padding-right: 60rpx;
+
+        overflow: auto;
+
+        // 只有一行的代码块
+        &.line {
+            padding: 15rpx;
+        }
+    }
+
+    .tips {
+        position: relative;
+
+        padding: 20rpx;
+
+        &::before {
+            position: absolute;
+            top: -15rpx;
+            right: -20rpx;
+
+            // transform: rotate(15deg);
+
+            // content: "🔔";
+            content: "📌";
+        }
+    }
+
+    .console {
+        line-height: 1.5;
+
+        font-family: consolas;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}

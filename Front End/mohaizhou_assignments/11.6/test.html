@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+    label {
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+
+    .box {
+      margin: auto;
+    }
+
+    input {
+      display: block;
+      width: 300px;
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 5px;
+
+      outline: none;
+
+      border: 1px solid pink;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <label for="name" data-fuck="Invalid name.">name:</label><input type="text" id="name" name="name">
+    <label for="phone" data-fuck="Invalid name.">phone:</label><input type="text" id="phone" name="phone">
+    <label for="gender" data-fuck="Invalid name.">gender:</label><input type="text" id="gender" name="gender">
+  </div>
+
+
+  <script>
+    $(function () {
+
+    })
+  </script>
+</body>
+
+</html>

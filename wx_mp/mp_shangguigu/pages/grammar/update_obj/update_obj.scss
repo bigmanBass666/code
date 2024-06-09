@@ -1,0 +1,24 @@
+@import "../../../app.scss";
+
+$note-bgc: #b4edc0;
+
+.content-bgc {
+    @include content-bgc($note-bgc);
+
+    .demo {
+        margin-top: 10rpx;
+    }
+
+    .title {
+        &:nth-child(n+2) {
+            margin-top: 30rpx;
+        }
+
+        font: {
+            weight: 300;
+            size: 45rpx;
+        }
+
+        ;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-around;
+      align-items: end;
+      height: 400px;
+      width: 700px;
+      border-left: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-bottom-left-radius: 5px;
+    }
+
+    .box div {
+      position: relative;
+      width: 60px;
+      height: 300px;
+      background-color: gray;
+      transition: all .2s;
+      border-radius: 5px;
+      /* text-align: center; */
+    }
+
+    .box div:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .7);
+    }
+
+    .box div:active {
+      transform: scale(1.02);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .7);
+    }
+
+    .box div h4 {
+      position: absolute;
+      bottom: -28px;
+      font-weight: normal;
+    }
+
+    .box div span {
+      position: absolute;
+      top: -23px;
+      width: 100%;
+      /* background-color: pink; */
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" id="box">
+    <div class="rectangle" id="rectangle1">
+      <span>33</span>
+      <h4>第1季度</h4>
+    </div>
+    <div class="rectangle" id="rectangle2">
+      <span>33</span>
+      <h4>第2季度</h4>
+    </div>
+    <div class="rectangle" id="rectangle3">
+      <span>33</span>
+      <h4>第3季度</h4>
+    </div>
+    <div class="rectangle" id="rectangle4">
+      <span>33</span>
+      <h4>第4季度</h4>
+    </div>
+  </div>
+
+  <script>
+    // let heights = [100, 200, 300, 400]
+    let heights = []
+    let spans = document.getElementsByTagName('span')
+    let rectangles = document.getElementsByClassName('rectangle')
+
+    for (let j = 0; j < rectangles.length; j++) {
+      let num = prompt(`请输入第${j + 1}季度数据:`)  // prompt可以不用加+号
+      heights.push(num)
+    }
+
+    for (let i = 0; i < spans.length; i++) {
+      rectangles[i].style.height = `${heights[i]}px`
+      spans[i].innerHTML = `${heights[i]}`
+    }
+  </script>
+</body>
+
+</html>

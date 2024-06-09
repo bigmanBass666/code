@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>中草药植物导航</title>
+    <!-- 引入百度地图API -->
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=XkvQEbTfOQHGCLTiKXZ4EmqK0e9BYbet"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .search {
+            margin-top: 15px;
+            height: 50px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .search input {
+            border-radius: 15px;
+            border: 1px solid black;
+            padding-left: 10px;
+            width: 300px;
+            height: 38px;
+        }
+
+        .search input:hover {
+            border: 2px solid black;
+        }
+
+        .search button:hover {
+            border: 2px solid black;
+        }
+
+        .search button:active {
+            background-color: #c1c1c1;
+        }
+
+        .search button {
+            border-radius: 15px;
+            border: 1px solid black;
+            width: 38px;
+            height: 38px;
+            background-color: #fff;
+            vertical-align: middle;
+        }
+
+        .search button svg {
+            line-height: 50px;
+        }
+
+        #sidebar {
+            width: 300px;
+            height: 500px;
+            padding: 5px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #f2f2f2;
+            border-left: 1px solid rgb(204, 204, 204);
+        }
+
+        #sidebar h2,
+        #sidebar h3,
+        #sidebar img {
+            margin-bottom: 15px;
+            /* text-align: center; */
+        }
+
+        #sidebar h3 {
+            font-weight: normal;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 地图容器 -->
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <!-- 搜索框 -->
+    <div class="search">
+        <label for="searchInput"></label><input type="text" id="searchInput">
+        <button onclick="search()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+        </button>
+    </div>
+    <!-- 侧边栏 -->
+    <div id="sidebar">
+        <!-- <h2>草药信息</h2> -->
+        <div id="herbInfo"></div>
+    </div>
+    <!-- 这里可以通过ajax等方式从服务器获取中草药植物的位置信息和区域信息数据并转换为mapPoint列表 -->
+    <script type="text/javascript">
+        const herbData = [
+            {
+                name: '黄精',
+                // pic: "https://baike.baidu.com/pic/%E5%A4%A9%E9%BA%BB/274538/1/9d82d158ccbf6c813680fc83b33eb13533fa4022?fr=lemma&fromModule=lemma_top-image&ct=single",
+                pic: "天麻",
+                address: '云安区、新兴县和郁南县的山林地带',
+                lng: 111.940791,
+                lat: 23.122835,
+                information: "主要功效包括养阴润燥、止咳化痰、滋补肝肾等。黄精富含黄精甙、黄精内酯、黄精素等多种成分，具有补虚止汗、滋阴润燥、润肺化痰等作用，可用于治疗肺虚咳嗽、痨病、自汗盗汗、脱发等症状。"
+            },
+
+            {
+                name: '当归',
+                address: '云浮市新兴县大坪村',
+                lng: 112.139487,
+                lat: 22.703955,
+                information: "主要功效包括补血活血、调经止痛、润肠通便等。当归富含挥发油、甾醇、香豆素等成分，具有增加血流、舒张血管、调节免疫系统等作用，可用于治疗女性病、中风后遗症、便秘等症状。"
+            },
+
+            {
+                name: '珍珠母',
+                address: '罗定市和云安区的山地和林带中',
+                lng: 111.950791,
+                lat: 23.122835,
+                information: "主要功效包括清热解毒、镇静安神、润肺化痰等。珍珠母富含碳酸钙、鞣质等成分，具有清热解毒、镇定安神、润肺化痰等作用，可用于治疗发热、痰多、咳嗽、失眠、焦虑等症状"
+            },
+
+            {
+                name: '金银花',
+                address: '云安、新兴和罗定等县市',
+                lng: 111.949282,
+                lat: 23.079437,
+                information: "主要功效包括清热去火、解毒消肿、抗菌消炎等。金银花富含黄酮类、糖类、挥发油等成分，具有清热解毒、抗病毒、降血压、抗过敏等作用，可用于治疗感冒、麻疹、痘痘、疮疖等症状。"
+            },
+
+            {
+                name: '灵芝',
+                address: '云安区的山地和林带中',
+                lng: 111.862464,
+                lat: 23.073717,
+                information: "主要功效包括增强免疫力、抗肿瘤、调节代谢等。灵芝富含多糖、三萜类化合物、脂肪等成分，具有抗肿瘤、增强免疫力、降低血脂、调节代谢等作用，可用于治疗癌症、肝炎、高血压等症状。"
+            },
+
+            {
+                name: '天麻',
+                address: '新兴县和罗定市的山地和林带中',
+                lng: 111.822835,
+                lat: 22.922835,
+                information: "主要功效包括镇静安神、止痛消炎、祛风去湿等。天麻富含天麻素、天麻酯等多种成分，具有调节中枢神经系统、抗炎镇痛、改善睡眠、祛风除湿等作用，可用于治疗头痛、失眠、中风、关节炎、风湿性疾病等症状。在中药方剂中常用天麻与其他药材组合，如天麻钩藤汤、天麻地黄丸等。"
+            },
+
+            {
+                name: '紫金草',
+                address: '云浮市新兴县罗浮山',
+                lng: 112.229568,
+                lat: 22.494994,
+                information: "主要功效包括被广泛应用于中医领域，并获得了很好的疗效。其他功效还包括：清热解毒，利尿通淋，解毒消肿，止咳化痰等。"
+            },
+
+            {
+                name: '石斛',
+                address: '广东省云浮市五云山自然保护区',
+                lng: 112.068,
+                lat: 23.302,
+                information: "补虚损，养阴润肺，补血安神"
+            },
+
+            {
+                name: '黄芪',
+                address: '广东省云浮市罗定市田东镇',
+                lng: 111.561,
+                lat: 22.842,
+                information: "益气固表，生津止渴，固肾益精"
+            },
+
+            {
+                name: '丹参',
+                address: '广东省云浮市新兴县',
+                lng: 112.214,
+                lat: 22.708,
+                information: "活血化瘀，清热解毒，消肿止痛"
+            },
+
+            {
+                name: '五味子',
+                address: '广东省云浮市郁南县',
+                lng: 111.534,
+                lat: 23.235,
+                information: "固肾止泻，润肺止咳，安神益智"
+            },
+
+            {
+                name: '首乌',
+                address: '广东省云浮市云安区',
+                lng: 111.877,
+                lat: 23.078,
+                information: "补血益肾，黑发乌须，润肠通便"
+            }
+            // {name: '',address: '',lng: ,lat: ,information: ""}
+            // {name: '',address: '',lng: ,lat: ,information:"" }
+        ];
+        var mapPoints = herbData.map(function (data) {
+            var point = new BMap.Point(data.lng, data.lat);
+            var marker = new BMap.Marker(point);
+            // 在标志点上添加中草药名称和基本信息，并绑定事件
+            marker.addEventListener("click", function () {
+                showInfo(data);
+            });
+            return marker;
+        });
+        // 地图初始化
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(112.044, 22.929);
+        map.centerAndZoom(point, 10);
+        map.enableScrollWheelZoom(true);
+        // 将标志点添加到地图上
+        for (var i = 0; i < mapPoints.length; i++) {
+            map.addOverlay(mapPoints[i]);
+        }
+        // 搜索功能：根据用户输入的地址或名称进行搜索定位
+        function search() {
+            var geocoder = new BMap.Geocoder();
+            var address = document.getElementById("searchInput").value;
+            geocoder.getPoint(address, function (point) {
+                if (point) {
+                    map.centerAndZoom(point, 15);
+                } else {
+                    alert("未找到该地址，请重新输入！");
+                }
+            });
+        }
+        // 展示中草药详细信息
+        function showInfo(data) {
+            // document.getElementById("herbInfo").innerHTML = "<h2>" + data.name + "</h2><h3>" + data.address + "</h3><p>" + data.information + "</p>";
+            document.getElementById("herbInfo").innerHTML = `
+                <h2>${data.name}</h2>
+                < img src="${data.pic}"/>
+                <h3>${data.address}</h3 >
+                <p>${data.information}</p>`;
+
+            document.getElementById("sidebar").style.left = "calc(100% - 300px)";
+        }
+    </script>
+</body>
+
+</html>

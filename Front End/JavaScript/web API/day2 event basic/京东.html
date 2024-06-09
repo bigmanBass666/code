@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      border-radius: 10px;
+      transition: all .3s;
+    }
+
+    img:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+      transform: translateY(-3px);
+    }
+
+    img:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+      transform: translateY(0);
+    }
+
+    #btn {
+      --size: 30px;
+
+      cursor: pointer;
+      user-select: none;
+
+      background-color: black;
+      width: var(--size);
+      height: var(--size);
+      line-height: var(--size);
+      text-align: center;
+      color: #fff;
+
+      border-radius: 50%;
+
+      transform: translate(10px, -26px);
+      transition: all .3s;
+    }
+
+    #btn:hover {
+      background-color: #fff;
+      color: #000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .8);
+      transform: translate(10px, -30px);
+    }
+
+    #btn:active {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+      transform: translate(10px, -27px);
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./06-素材/images/jd.webp" alt="">
+  <div id="btn">X</div>
+
+  <script>
+    const btn = document.getElementById('btn')
+    const img = document.querySelector('img')
+
+    btn.addEventListener('click', () => {
+      if (img.style.opacity === '0') {
+        img.style.opacity = 1
+      } else {
+        img.style.opacity = 0
+      }
+    })
+  </script>
+</body>
+
+</html>

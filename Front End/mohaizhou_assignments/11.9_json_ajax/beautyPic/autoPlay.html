@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Picture</title>
+  <!-- <script src="../js/jquery-3.7.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all .2s;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #picLink {
+      margin: auto;
+    }
+
+    img {
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      height: 70vh;
+    }
+
+    img:hover {
+      transform: translateY(-5px);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 40px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 2px;
+    }
+
+    img:active {
+      transform: translateY(-1px);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 38px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" id="picLink" target="_blank">
+    <img src="">
+    <div class="loading"></div>
+  </a>
+
+  <script>
+    $(function () {
+      /*
+        1. url 请求地址
+        2. data 设置发送给服务器的数据, 没有参数不需要设置
+        3. success 设置请求成功后的回调函数
+        4. dataType 设置返回的数据格式，常用的是'json'格式, 默认智能判断数据格式
+      */
+      let imgArr = []
+      let timerId
+      const imgRelay = 1000
+      const url = 'https://api.qqsuu.cn/api/dm-littlesister'
+      const apiKey = 'f360aa2118c0875243b2cce940eaede8'
+
+      function showGotImg() {
+        $.get(`${url}?type=json&apiKey=${apiKey}`, function (response) {
+          // console.log(response);
+          $('img').attr('src', response.img)
+          $('#picLink').attr('href', response.img)
+          
+          imgArr.push(response.img)  // TODO  history
+          // console.log(imgArr);
+        })
+      }
+
+      showGotImg()
+
+      timerId = setInterval(showGotImg, imgRelay)
+
+      $('img').on({
+        mouseenter: function () {
+          clearInterval(timerId)
+        },
+        mouseleave: function () {
+          timerId = setInterval(showGotImg, imgRelay)
+        },
+      })
+
+      /*
+        1. url 请求地址
+        2. data 设置发送给服务器的数据, 没有参数不需要设置
+        3. success 设置请求成功后的回调函数
+        4. dataType 设置返回的数据格式，常用的是'json'格式, 默认智能判断数据格式
+      */
+      // $.post("test.php", { "func": "getNameAndTime" }, function (data) {
+      //   alert(data.name);
+      //   console.log(data.time);
+      // }, "json").error(function () {
+      //   alert("网络异常");
+      // });
+    });
+  </script>
+</body>
+
+</html>

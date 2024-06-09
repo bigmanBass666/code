@@ -1,0 +1,9 @@
+{
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling"
+    ],
+    "[c]": {
+        "editor.suggest.insertMode": "insert"
+    },
+    "C_Cpp.default.compilerPath": "e:\\melon\\apps\\mingw64\\bin\\gcc.exe",
+}

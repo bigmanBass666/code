@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //     ### 练习题5:
+
+    // **目标：** 封装一个函数,可以求任意数组的和 或 平均值
+
+    // **要求：**
+
+    // - 函数可以传递2个参数，比如  handleData(arr, true)      `handleData 处理数据的意思`
+    //   * 参数一： 接受实参传递过来的数组
+    //   * 参数二:    布尔类型  如果是true或者不传递参数 是求和操作，   如果传递过来的参数是 false 则是求平均值
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    console.log(handleDate(arr));
+    console.log(handleDate(arr, false));
+    console.log(handleDate(arr, true));
+
+    function handleDate(arr = [], bool = true) {
+      let sum = arr[0]
+      for (let i = 1; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      return bool ? sum : sum / arr.length
+    }
+  </script>
+</body>
+
+</html>

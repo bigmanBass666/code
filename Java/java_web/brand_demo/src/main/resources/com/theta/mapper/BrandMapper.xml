@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.theta.mapper.BrandMapper">
+
+  <resultMap type="Brand" id="brandResultMap">
+    <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+  </resultMap>
+
+  <!-- selectAll -->
+
+  <select id="selectAll" resultMap="brandResultMap">
+    select * from tb_brand;
+  </select>
+
+  <!-- add -->
+
+  <insert id="add">
+    insert into tb_brand
+      (id, brand_name, company_name, ordered, description, status) values
+      (#{id}, #{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+  </insert>
+
+  <!-- selectById -->
+
+  <select id="selectById" resultMap="brandResultMap">
+    select * from tb_brand
+    <where>
+      id = #{id};
+    </where>
+  </select>
+
+  <!-- update -->
+
+  <update id="update">
+    update tb_brand
+    set brand_name = #{brandName},
+    company_name = #{companyName},
+    ordered = #{ordered},
+    description = #{description},
+    status = #{status}
+    <where>
+          id = #{id};
+    </where>
+  </update>
+
+  <!-- delete -->
+
+  <delete id="delete">
+    delete from tb_brand where id = #{id};
+  </delete>
+</mapper>

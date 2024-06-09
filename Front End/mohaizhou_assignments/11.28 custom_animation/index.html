@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="jquery-3.7.1.js"></script>
+    <link
+      rel="shortcut icon"
+      href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+      type="image/x-icon"
+    />
+
+    <title>Awesome animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+      }
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        width: 20%;
+
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 15px 0;
+        background-color: coral;
+
+        text-align: center;
+      }
+
+      li:last-child {
+        border-right: 0;
+      }
+
+      #div11 {
+        position: relative;
+        overflow: hidden;
+
+        margin: auto;
+        width: 40vw;
+        height: 25vh;
+
+        border-radius: 10px;
+
+        background-color: green;
+
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+      }
+
+      button {
+        position: absolute;
+        left: 50%;
+        bottom: 13px;
+
+        width: 30%;
+        padding: 10px 0;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+
+        transform: translateX(-50%);
+        font-size: 1em;
+
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+        transform: translateX(-50%) scale(1.04);
+      }
+
+      button:active {
+        transform: translateX(-50%) scale(1.02);
+      }
+
+      input[type="range"] {
+        position: absolute;
+        top: 50%;
+        right: 20vw;
+
+        transform: rotate(-90deg) translateY(-50%);
+      }
+
+      input[type="range"]::before {
+        position: absolute;
+        left: -25px;
+
+        content: attr(data-value);
+
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div11">
+      <ul style="list-style: none">
+        <li>首页</li>
+        <li>文章</li>
+        <li>图片</li>
+        <li>软件</li>
+        <li>教程</li>
+      </ul>
+      <button type="button">自定义动画</button>
+    </div>
+
+    <input type="range" data-value="500" max="1000" min="0" />
+
+    <script>
+      $(function () {
+        let duration;
+
+        function hideAnim() {
+          $("li:visible:last").hide(duration, hideAnim);
+        }
+
+        function showAnim() {
+          $("li:hidden:first").show(duration, showAnim);
+        }
+
+        $("button").on("click", function () {
+          if ($("li:visible").length == 0) {
+            duration = +$('input[type="range"]').val();
+            showAnim();
+          } else if ($("li:hidden").length == 0) {
+            duration = +$('input[type="range"]').val();
+            hideAnim();
+          }
+        });
+
+        $("input[type='range']").on("change", function () {
+          $(this).attr("data-value", $(this).val());
+        });
+
+        //  shortcut: ( Enter / Space ) to click the button.
+        $(window).keyup(function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            $("button").click();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

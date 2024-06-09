@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        input {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label>第一边</label><input type="text" name="one" id="one">
+    <label>第二边</label><input type="text" name="one" id="two">
+    <label>第三边</label><input type="text" name="one" id="three">
+    <button name="btn_js">计算三角形</button>
+    <p>三角形是否是直角三角形：</p>
+    <p>三角形的周长：</p>
+
+
+
+
+
+
+    <script type="text/javascript">
+        function isTriangle(a, b, c) {
+            if (a + b > c && a + c > b && b + c > a) {
+                return true
+            }
+            return false
+        }
+        function isRightAngledTriangle(a, b, c) {
+            if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + a * a === c * c) {
+                return true
+            }
+            return false
+        }
+
+        // [500, 734]
+        // rand() % ((右端点 - 左端点) + 1) + 左端点
+        // rand() % ((734 - 500) + 1) + 500
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

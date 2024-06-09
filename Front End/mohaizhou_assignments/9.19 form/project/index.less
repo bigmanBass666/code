@@ -1,0 +1,365 @@
+// out: index.css
+@backgroundColor: #f5f5f5;
+@mainColor: #1f4037;
+@secondaryColor: #99f2c8;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: @backgroundColor;
+    font-size: 1.25em;
+    letter-spacing: 0.1rem;
+    color: #333;
+}
+
+:root {
+    accent-color: @mainColor;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 30px 15px;
+    height: 100%;
+    width: 1200px;
+    background-color: #fff;
+    overflow: auto;
+    user-select: none;
+    scroll-behavior: smooth;
+
+    // &:hover {
+    //     overflow: auto;
+    // }
+}
+
+b {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 70px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+    outline: none;
+    caret-color: @mainColor;
+    // caret-shape: block;
+}
+
+label {
+    cursor: pointer;
+}
+
+// input[type="date"] {}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="date"],
+select {
+    transition: all .2s;
+
+    &:hover,
+    &:focus {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+    }
+}
+
+select {
+    margin-left: 15px;
+    padding: 7px;
+    padding-top: 7.5px;
+    padding-right: 6.5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: .1em;
+    font-size: 1.1em;
+    outline: none;
+    transition: all .2s;
+
+    &:hover,
+    &:focus,
+    &:valid {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+    }
+}
+
+.photo {
+    position: absolute;
+    right: 2px;
+    top: 0;
+}
+
+.photo label {
+    // background-color: #ccc;
+    padding: 8px;
+    border: 1px solid @mainColor;
+    border-radius: 10px;
+    transition: all .2s;
+    font-weight: 500;
+    font-size: 0.9em;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background: @mainColor;
+        box-shadow: rgba(0, 0, 0, 0.6) 0 2px 20px 0;
+        // transform: translateY(-5px);
+    }
+
+    &:active {
+        // transform: translateY(-1px);
+        box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px 0;
+    }
+}
+
+.speciality,
+.workExperience {
+    // display: flex;
+    // flex-direction: column;
+    height: 40px;
+
+    // label {
+    //     margin-bottom: 15px;
+    // }
+}
+
+.gender {
+    // display: flex;  
+    position: relative;
+}
+
+.birthday label {
+    margin-left: 5px;
+}
+
+.wrapper .startingEndingTime {
+    width: auto;
+}
+
+.gender,
+.birthday,
+.maritalStatus {
+    // width: 350px;
+}
+
+input[type="radio"],
+input[type="checkBox"] {
+    margin: 0 13px;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid @mainColor;
+    transition: 0.2s all linear;
+    // margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+
+    cursor: pointer;
+
+    &:hover {
+        // width: 21px;
+        // height: 21px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+    }
+
+    &:checked {
+        border: 8px solid @mainColor;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+    }
+}
+
+
+/* 自定义外观样式 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 添加自定义背景和样式 */
+// input[type="number"] {
+//     padding: 5px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     font-size: 16px;
+//     outline: none;
+
+.wrapper form>div {
+    // display: inline-block;
+    margin-bottom: 50px;
+    width: 350px;
+    line-height: 40.82px;
+}
+
+.wrapper form>div i {}
+
+::-webkit-scrollbar {
+    width: 5px;
+    // background-color: #007BFF;
+    // background-color: rgb(223, 223, 223);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    // background-color: @mainColor;
+    background: linear-gradient(45deg, #1f4037, #99f2c8);
+    border-radius: 50px;
+}
+
+// select option:checked {
+// background-color: @mainColor;
+// color: #fff;
+// }
+
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field {
+    padding: 7px;
+    transition: all .2s;
+    // margin-right: 10px;
+    // border-radius: 3px;
+}
+
+::-webkit-datetime-edit-year-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-year-field:focus,
+::-webkit-datetime-edit-day-field:focus,
+::-webkit-datetime-edit-month-field:focus {
+    // background-color: @mainColor;
+    background-color: #fff;
+    // color: #fff;
+    color: #000;
+}
+
+input[type="date"] {
+    width: 150px;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    // border: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+// 小日历
+input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* 自定义选中日期的样式 */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    // background-color: @mainColor;
+    background-color: #0080ff;
+}
+
+.wrapper .familyStatus {
+    width: 100%;
+}
+
+.father,
+.mother {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.mother {
+    margin-bottom: 10px;
+}
+
+h2 {
+    transform: translateY(-35px);
+    font-weight: normal;
+    letter-spacing: .1em;
+    width: 100%;
+}
+
+.wrapper {
+
+    .workingKnowledge,
+    .lastWorkExperience,
+    .attitude,
+    .comprehension,
+    .testPerformance,
+    .useless {
+        width: 520px;
+    }
+
+    .buttonArea {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-bottom: 0;
+        width: 100%;
+        height: 55px;
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 25px;
+            border-radius: 100px;
+            border: 1px solid @mainColor;
+            background-color: transparent;
+            transition: all .2s;
+            font-size: 1.1em;
+            cursor: pointer;
+            letter-spacing: .1em;
+
+            &:hover {
+                color: #fff;
+                background: @mainColor;
+                box-shadow: rgba(0, 0, 0, 0.6) 0 2px 20px 0;
+                transform: translateY(-6px);
+            }
+
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: rgba(0, 0, 0, 0.6) 0 2px 7px 0;
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
+}

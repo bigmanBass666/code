@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- todo -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      margin: 50px auto;
+      border: 1px solid #000;
+      border-collapse: collapse;
+      text-align: center;
+      transition: all .2s;
+      user-select: none;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 15px;
+      transition: all .2s;
+      /* text-align: center; */
+    }
+
+    th:hover,
+    td:hover {
+      transform: scale(1.1);
+    }
+
+    th:active,
+    td:active,
+    table:active {
+      transform: scale(1.005);
+    }
+
+    table:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+    }
+
+    table:active {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+    }
+  </style>
+</head>
+
+<body>
+  <table id="table">
+  </table>
+
+  <script>
+    let table = document.getElementById('table')
+
+    let students = [
+      { name: '小明', age: 18, gender: '男', hometown: '河北省' },
+      { name: '小红', age: 19, gender: '女', hometown: '河南省' },
+      { name: '小刚', age: 17, gender: '男', hometown: '山西省' },
+      { name: '小丽', age: 18, gender: '女', hometown: '山东省' }
+    ]
+
+    // table header
+    let tr = document.createElement('tr')
+    table.appendChild(tr)
+    for (key in students[0]) {
+      let th = document.createElement('th')
+      th.setAttribute('id', key)
+      th.innerHTML = key
+      tr.appendChild(th)
+      // console.log(key);
+    }
+
+    // table data
+    for (studentIndex in students) {
+      
+      let tr = document.createElement('tr')
+      table.appendChild(tr)
+
+      for (key in students[studentIndex]) {
+        let value = students[studentIndex][key]
+        
+        let td = document.createElement('td')
+        td.setAttribute('id', key)
+        td.innerHTML = value
+        tr.appendChild(td)
+        // console.log(value);
+      }
+    }
+  </script>
+</body>
+
+</html>

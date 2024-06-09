@@ -1,0 +1,4 @@
+script\e_script\e_add_system_variable.bat
+script\f_script\f_add_system_variable.bat
+
+E:\melon\.gitignore (改版本号)

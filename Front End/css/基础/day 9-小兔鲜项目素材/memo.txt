@@ -1,0 +1,13 @@
+shortcut
+
+header
+
+放大镜 79 69
+
+car 119 69
+
+banner height500 #f5f5f5
+
+aside black w250 opacity0.8
+
+li h50

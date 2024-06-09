@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.28作业</title>
+    <script src="jquery-3.7.1.js"></script>
+
+    <style>
+      li {
+        background-color: coral;
+        width: 150px;
+        height: 60px;
+        float: left;
+        border: 1px solid black;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      #div11 {
+        width: 800px;
+        height: 200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>自定义动画</h3>
+    <div id="div11">
+      <ul style="list-style: none">
+        <li>首页</li>
+        <li>文章</li>
+        <li>图片</li>
+        <li>软件</li>
+        <li>教程</li>
+      </ul>
+      <button type="button">自定义动画</button>
+    </div>
+
+    <script>
+      $(function () {
+        function anim() {
+          $("li:visible:last").hide(500, anim);
+        }
+
+        $("button").on("click", function () {
+          anim();
+        });
+      });
+    </script>
+  </body>
+</html>

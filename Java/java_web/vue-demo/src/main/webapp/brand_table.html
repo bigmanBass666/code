@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>brand_table</title>
+
+  <style>
+    .el-table .warning-row {
+      background: oldlace;
+    }
+
+    .el-table .success-row {
+      background: #f0f9eb;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 搜索表单 -->
+    <el-form :inline="true" :model="brand" class="demo-form-inline">
+      <el-form-item label="current status">
+        <el-select v-model="brand.status" placeholder="current status">
+          <el-option label="enable" value="1"></el-option>
+          <el-option label="disable" value="0"></el-option>
+        </el-select>
+      </el-form-item>
+
+      <el-form-item label="company name">
+        <el-input v-model="brand.companyName" placeholder="company name"></el-input>
+      </el-form-item>
+
+      <el-form-item label="brand name">
+        <el-input v-model="brand.brandName" placeholder="brand name"></el-input>
+      </el-form-item>
+
+      <el-form-item>
+        <el-button type="primary" @click="addBrand">search</el-button>
+      </el-form-item>
+    </el-form>
+
+    <!-- 按钮 -->
+    <el-row>
+      <el-button type="danger" @click="" plain>delete</el-button>
+      <el-button type="primary" @click="dialogVisible = true" plain>add</el-button>
+    </el-row>
+
+    <!-- 添加数据对话框表单 -->
+    <el-dialog title="Edit Brand" :visible.sync="dialogVisible" width="30%">
+      <el-form ref="form" :model="brand" label-width="">
+        <el-form-item label="brand name">
+          <el-input v-model="brand.brandName"></el-input>
+        </el-form-item>
+
+        <el-form-item label="company name">
+          <el-input v-model="brand.companyName"></el-input>
+        </el-form-item>
+
+        <el-form-item label="ordered">
+          <el-input v-model="brand.ordered"></el-input>
+        </el-form-item>
+
+        <el-form-item label="description">
+          <el-input type="textarea" v-model="brand.description"></el-input>
+        </el-form-item>
+
+        <el-form-item label="status">
+          <el-switch v-model="brand.status" active-value="1" inactive-value="0"></el-switch>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button type="primary" @click="onSubmit">submit</el-button>
+          <el-button @click="dialogVisible = false">cancel</el-button>
+        </el-form-item>
+      </el-form>
+
+
+    </el-dialog>
+
+
+    <!-- 表格 -->
+    <template>
+      <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName"
+        @selection-change="handleSelectionChange">
+
+        <el-table-column type="selection" align="center">
+        </el-table-column>
+        <el-table-column type="index" align="center">
+        </el-table-column>
+
+        <el-table-column prop="brandName" label="brandName" align="center">
+        </el-table-column>
+
+        <el-table-column prop="companyName" label="companyName" align="center">
+        </el-table-column>
+
+        <el-table-column prop="ordered" label="ordered" align="center">
+        </el-table-column>
+
+        <el-table-column prop="status" label="status" align="center">
+        </el-table-column>
+
+        <el-table-column label="操作" align="center">
+          <el-button type="primary" size="small">modify</el-button>
+          <el-button type="danger" size="small">delete</el-button>
+        </el-table-column>
+      </el-table>
+    </template>
+
+    <!-- 分页工具条 -->
+    <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage"
+      :page-sizes="[5, 10, 15, 20]" :page-size="5" layout="total, sizes, prev, pager, next, jumper" :total="400">
+    </el-pagination>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script src="element-ui-2.15.14/lib/index.js"></script>
+  <link rel="stylesheet" href="element-ui-2.15.14/lib/theme-chalk/index.css">
+
+  <script>
+    new Vue({
+      el: '#app',
+
+      methods: {
+        tableRowClassName({ row, rowIndex }) {
+          if (rowIndex === 1) {
+            return 'warning-row'
+          } else if (rowIndex === 3) {
+            return 'success-row'
+          }
+          return ''
+        },
+
+        // 复选框选中后执行的方法
+        handleSelectionChange(val) {
+          this.multipleSelection = val
+          console.log('🚀 ~ handleSelectionChange ~ multipleSelection:', this.multipleSelection)
+        },
+
+        // 查询方法
+        onSubmit() {
+          console.log(this.brand)
+        },
+
+        // 添加数据
+        addBrand() {
+          console.log(this.brand)
+        },
+
+        // 分页
+        handleSizeChange(val) {
+          console.log(`每页 ${val} 条`)
+        },
+
+        handleCurrentChange(val) {
+          console.log(`当前页: ${val}`)
+        }
+      },
+
+      data() {
+        return {
+          currentPage: 4,
+          
+          form: {
+            name: '',
+            region: '',
+            date1: '',
+            date2: '',
+            delivery: false,
+            type: [],
+            resource: '',
+            desc: ''
+          },
+
+          // 添加数据对话框是否展示的标记
+          dialogVisible: false,
+
+          // 搜索表单数据
+          brand: {
+            status: '',
+            brandName: '',
+            companyName: '',
+            id: '',
+            ordered: '',
+            description: ''
+          },
+
+          // 复选框选中集
+          multipleSelection: [],
+
+          // 表格数据
+          tableData: [{
+            brandName: 'Huawei',
+            companyName: 'Huawei company',
+            ordered: '100',
+            status: '1'
+          }, {
+            brandName: 'Huawei',
+            companyName: 'Huawei company',
+            ordered: '100',
+            status: '1'
+          }, {
+            brandName: 'Huawei',
+            companyName: 'Huawei company',
+            ordered: '100',
+            status: '1'
+          }, {
+            brandName: 'Huawei',
+            companyName: 'Huawei company',
+            ordered: '100',
+            status: '1'
+          }]
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

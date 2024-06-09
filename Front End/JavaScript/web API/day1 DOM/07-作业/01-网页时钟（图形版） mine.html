@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>fuck clock</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .clock {
+      width: 600px;
+      height: 600px;
+      background: url(./images/clock.jpg) no-repeat;
+      margin: 50px auto 0;
+      position: relative;
+      transition: all .3s;
+    }
+
+    .clock:hover {
+      transform: translateY(-10px) scale(1.01);
+    }
+
+    .hh,
+    .mm,
+    .ss {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: url(./images/hour.png) no-repeat center;
+    }
+
+    .mm {
+      background-image: url(./images/minute.png);
+      transform: rotate(270deg);
+    }
+
+    .ss {
+      background-image: url(./images/second.png);
+      transform: rotate(0deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="hh" id="h"></div>
+    <div class="mm" id="m"></div>
+    <div class="ss" id="s"></div>
+  </div>
+  <script>
+    /*
+      知识点：
+        1. 创建日期对象 获取当前时间
+        2. 多次定时器，重复获取时间，让指针动起来
+    */
+
+    const second = document.querySelector('.ss')
+
+    let degree = 0
+    setInterval(() => {
+      degree += 6
+      if (degree >= 360) {
+        degree = 0
+      }
+      second.style.transform = `rotateZ(${degree}deg)`
+      console.log(degree);
+    }, 1000);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 封装一个函数，计算两个数的和
+    // 2. 封装一个函数，计算1 - 100之间所有数的和
+    console.log(add(1, 2));
+    console.log(sumsAllNumberBetween(1, 100));
+
+    function add(a, b) {
+      return a + b
+    }
+
+    function sumsAllNumberBetween(a, b) {
+      let sum = a
+      for (let i = a + 1; i <= b; i++) {
+        sum += i
+      }
+      return sum
+    }
+  </script>
+</body>
+
+</html>

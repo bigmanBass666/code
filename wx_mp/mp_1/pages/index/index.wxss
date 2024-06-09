@@ -1,0 +1,19 @@
+@import "/common/common.wxss";
+
+page {
+  padding: 15px;
+}
+
+image {
+  height: 80px;
+}
+
+input {
+  padding: 6px;
+  margin: 5px;
+
+  width: 80%;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+}

@@ -1,0 +1,18 @@
+<view class="li">
+  <nav-collapse header="Event System"></nav-collapse>
+</view>
+<view class="li">
+  <nav-collapse header="Event System" navigatorInfo="{{navigatorInfo}}"></nav-collapse>
+</view>
+<view class="li">
+  <nav-collapse header="Event System"></nav-collapse>
+</view>
+<view class="li">
+  <nav-collapse header="Event System" navigatorInfo="{{navigatorInfo}}"></nav-collapse>
+</view>
+<view class="li">
+  <nav-collapse header="Event System"></nav-collapse>
+</view>
+<view class="li">
+  <nav-collapse header="Event System" navigatorInfo="{{navigatorInfo}}"></nav-collapse>
+</view>

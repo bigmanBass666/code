@@ -1,0 +1,445 @@
+@mainColor: #002fa7;
+@secondColor: #c8c7c5;
+
+* {
+  transition: all 0.2s;
+
+  // user-select: none;
+
+  &::selection {
+    background-color: @mainColor;
+    color: white;
+  }
+
+  &::after,
+  &::before {
+    transition: all 0.2s;
+  }
+}
+
+:root {
+  accent-color: @mainColor;
+  font-size: 2vh;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  // background-color: #000;
+  // background-color: @mainColor;
+  background-color: @secondColor;
+}
+
+.prompt {
+  position: absolute;
+
+  height: 5vh;
+
+  color: #002fa7;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 5vh;
+
+  pointer-events: none;
+
+  transform: translateX(-90%);
+
+  z-index: 1;
+
+  animation: promptAnimation 1s infinite alternate;
+
+  @keyframes promptAnimation {
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+.box {
+  position: relative;
+
+  margin: auto;
+  width: 40vw;
+  height: 85vh;
+
+  border-radius: 1.6vh;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  overflow: hidden;
+}
+
+.formBox,
+.tableBox {
+  width: 100%;
+  height: 100%;
+  padding: 3vh;
+
+  transition: all 0.5s;
+  border-radius: 1.6vh;
+}
+
+.formBox {
+  position: relative;
+  background-color: #fff;
+}
+
+form {
+  & > div {
+    margin-bottom: 4vh;
+    height: 4vh;
+    width: 100%;
+  }
+}
+
+.inputBox {
+  &:hover i {
+    background-color: @mainColor;
+  }
+}
+
+.choiceBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+
+  input {
+    appearance: none;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 19%;
+    height: 100%;
+
+    border: 1.8px solid @secondColor;
+    border-radius: 1.5vh;
+
+    font-size: inherit;
+
+    &:hover,
+    &:checked {
+      border-color: @mainColor;
+    }
+
+    &:hover {
+      color: @mainColor;
+    }
+
+    &:checked {
+      // color: #fff;
+      color: @secondColor;
+    }
+
+    &::after {
+      content: attr(value);
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+.dept {
+  input {
+    &:first-child {
+      pointer-events: none;
+      border-color: red;
+      color: red;
+
+      &.active {
+        border-color: @mainColor;
+        background-color: @mainColor;
+        color: @secondColor;
+      }
+
+      &.anm {
+        animation: deptBorderAnm 0.2s 16 alternate linear;
+      }
+    }
+
+    &:checked {
+      color: @mainColor;
+    }
+  }
+
+  @keyframes deptBorderAnm {
+    to {
+      border-color: transparent;
+    }
+  }
+}
+
+.hobbiesTitle {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  font-weight: normal;
+}
+
+.hobbies {
+  margin-top: 1vh;
+  input {
+    column-gap: 0;
+    overflow: hidden;
+
+    &:hover,
+    &:checked {
+      &::before {
+        flex: auto;
+        transform: translateX(0);
+      }
+
+      &::after {
+        flex: auto;
+        margin-left: -1vw;
+      }
+    }
+
+    &:checked {
+      background-color: @mainColor;
+    }
+
+    // emoji
+    &::before {
+      transform: translateX(-2.6vh);
+      content: attr(data-emoji);
+      width: 0;
+      text-align: right;
+    }
+
+    // hobby value
+    &::after {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
+
+.selfIntroduction {
+  height: 27vh;
+
+  textarea {
+    outline: none;
+    resize: none;
+
+    width: 100%;
+    height: 100%;
+    margin-top: 1vh;
+    padding: 2vh;
+
+    border-radius: 1vh;
+    border-color: @secondColor;
+
+    letter-spacing: 0.2em;
+
+    font-size: inherit;
+
+    &:focus,
+    &:hover {
+      border-color: @mainColor;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  bottom: 3vh;
+
+  width: calc(40vw - 2 * 3vh);
+
+  padding: 1.5vh;
+  border: 1px solid @mainColor;
+  border-radius: 1.2vh;
+
+  background-color: transparent;
+  color: @mainColor;
+
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 1.3em;
+
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @mainColor;
+    color: @secondColor;
+    // box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    // transform: translateY(-3px);
+  }
+
+  &.active {
+    background-color: @mainColor;
+    color: @secondColor;
+  }
+}
+
+.tableBox {
+  position: absolute;
+  right: -100%;
+  top: 0%;
+
+  background-color: white;
+}
+
+.tableContainer {
+  border-radius: 2vh;
+  border: 1px solid @mainColor;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  font-size: 1.1em;
+  letter-spacing: 0.15em;
+
+  border-collapse: collapse;
+
+  th,
+  td {
+    width: 50%;
+    height: 5.7vh;
+    text-align: center;
+    border: 1px solid @secondColor;
+    border-left: 0;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  th {
+    border-top: 0;
+    font-weight: normal;
+  }
+
+  tr {
+    &:has(+ tr:hover) td {
+      border-bottom-color: @mainColor;
+    }
+
+    &:hover {
+      td,
+      th {
+        border-color: @mainColor;
+        color: @mainColor;
+        // font-size: 1.05em;
+      }
+    }
+
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.formBox.moveLeft {
+  transform: translateX(-100%);
+
+  #submitBtn {
+    color: @secondColor;
+    background-color: @mainColor;
+  }
+}
+
+.tableBox {
+  &.moveLeft {
+    transform: translateX(-100%);
+  }
+
+  th.nameTrHover {
+    border-bottom-color: @mainColor;
+  }
+
+  #awesomeTd {
+    height: 8vh;
+  }
+
+  #awesomeTextarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    border: none;
+    height: 100%;
+    width: calc((40vw - 2 * 3vh) / 2);
+
+    overflow: auto;
+
+    font-size: inherit;
+    letter-spacing: inherit;
+
+    &::-webkit-scrollbar {
+      height: 0.8vh;
+      width: 0.8vh;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1vh;
+      background-color: @secondColor;
+
+      &:hover {
+        background-color: #788bbb;
+      }
+
+      &:active {
+        background-color: @mainColor;
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 3px;
+  right: 7px;
+  letter-spacing: 0.11em;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 1.5vh;
+  }
+
+  .box {
+    height: 90%;
+    width: 80%;
+  }
+
+  .btn {
+    width: calc(80vw - 2 * 3vh);
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 1.5vh;
+  }
+
+  .box {
+    height: 100%;
+    width: 100%;
+  }
+
+  .btn {
+    width: calc(100vw - 2 * 3vh);
+  }
+}

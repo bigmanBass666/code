@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>横过来看</title>
+    <!-- logo -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- 引入百度地图API -->
+    <script type="text/javascript"
+        src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=XkvQEbTfOQHGCLTiKXZ4EmqK0e9BYbet"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .BMap_Marker {
+            z-index: 999 !important;
+        }
+
+        .search {
+            padding-left: 2px;
+            border-radius: 50px;
+            height: 55px;
+            width: 600px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0 auto;
+
+            position: absolute;
+            top: 5%;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .search:hover {
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+        }
+
+        #modeButton {
+            float: left;
+            border: none;
+            border-radius: 100%;
+            /* margin: 50px 50%; */
+            margin-top: 2px;
+            width: 50px;
+            height: 50px;
+            /* background-color: #4a4a4a; */
+            background-color: rgba(0, 0, 0, 0);
+
+            cursor: pointer;
+        }
+
+        #modeButton img {
+            width: 28px;
+            margin-top: 3px;
+            /* margin-left: 1px; */
+        }
+
+        #modeButton img[title="地名"] {
+            margin-top: 6px;
+            width: 40px;
+            /* vertical-align: auto; */
+            /* line-height: 20px; */
+        }
+
+        .search input {
+            float: left;
+            padding-left: 20px;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+            width: 493px;
+            height: 55px;
+
+            font-size: 17px;
+            color: #000;
+            /* place-content: center; */
+        }
+
+        .search input::placeholder {
+            color: #585858;
+            vertical-align: auto;
+            font-size: 18px;
+        }
+
+        .search #searchButton {
+            float: right;
+            border-radius: 100%;
+            margin-right: 5px;
+            width: 50px;
+            height: 57px;
+            background-color: rgba(0, 0, 0, 0);
+
+            cursor: pointer;
+        }
+
+        .search input:active {
+            background-color: transparent;
+        }
+
+        .search button svg {
+            width: 30px;
+            height: 30px;
+            line-height: 55px;
+        }
+
+        #sidebar {
+            /* float: right; */
+            width: 25%;
+            height: 100%;
+            padding: 5px;
+            border-right: 1px solid #0072c9;
+            position: absolute;
+            top: 0;
+            /* left: 100%; */
+            background-color: #fff;
+            /* border-left: 1px solid rgb(204, 204, 204); */
+            z-index: -1;
+        }
+
+        #sidebar h2,
+        #sidebar h3,
+        #sidebar img {
+            margin-bottom: 15px;
+        }
+
+        #sidebar img {
+            width: 100%;
+        }
+
+        #sidebar .herbImg {
+            text-align: center;
+        }
+
+        #sidebar h3 {
+            font-weight: normal;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="allmap"></div> -->
+    <!-- 地图容器 -->
+    <div id="map"></div>
+
+    <div class="bottom">
+        <!-- 搜索框 -->
+        <div class="search">
+            <!-- 模式按鈕 -->
+            <button id="modeButton"><img src="../image/herb.svg" alt="" title="草藥名"></button>
+
+            <input type="text" id="searchInput" onkeypress="searchKeyPress(event)" placeholder="搜索草药信息" title="输入草药名">
+
+            <button id="searchButton" title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#707070" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- 侧边栏 -->
+    <div id="sidebar">
+        <!-- <h2>草药信息</h2> -->
+        <div id="herbInfo"></div>
+    </div>
+
+
+
+    <!-- 这里可以通过ajax等方式从服务器获取中草药植物的位置信息和区域信息数据并转换为mapPoint列表 -->
+    <script type="text/javascript">
+        const herbData = [
+            {
+                name: '三叉苦',
+                pic: ' https://pic.pingguolv.com/uploads/allimg/161213/109-1612131A626.jpg ',
+                address: '云浮市现种植3.12万亩，主要分布在云浮市云城区前锋镇崖楼村(三九银田南药园),16个种植基地，几乎都是由《华润三九医药股份有限公司》与基地合作实施。',
+                lng: 112.14581, lat: 22.816297,
+                information: "具清热解毒、	祛风除湿的功效。治疗咽喉肿痛、风湿骨痛、疟疾、黄疸等症。为“999感冒灵”的主要原料药材之一 "
+            },
+            {
+                name: '肉桂',
+                pic: ' https://img.ys991.com/uploads/allimg/20190610/1560178357104997.jpg',
+                address: ' 云浮罗定市榃滨镇',
+                lng: 111.405776,
+                lat: 22.820907,
+                information: "补火补火助阳，引火归元，散寒止痛，温通经脉。用于阳痿宫冷，腰膝冷痛，肾虚作喘，虚阳上浮，眩晕目赤，心腹冷痛，虚寒吐泻，寒疝腹痛，痛经经闭。"
+            },
+            {
+                name: '岗梅',
+                pic: "https://i.zyccst.com/upload/upay/926566/2/E5B297E6A285E6A0B9352E6A7067.jpg",
+                address: ' 云浮市云安区石城镇',
+                lng: 111.95190, lat: 22.74840,
+                information: "清热解毒，生津止渴。用于感冒，高热烦渴，扁桃体炎，咽喉炎，气管炎，百日咳，肠炎，痢疾，传染性肝炎，野蕈、砒霜中毒。为凉茶主要原料；叶外用治跌打损伤，痈疖肿毒。"
+            },
+            {
+                name: '两面针',
+                pic: "https://i.zyccst.com/upload/upay/926566/2/E4B8A4E99DA2E99288312E6A7067.jpg",
+                address: '云浮市云城区',
+                lng: 112.03, lat: 22.93,
+                information: "活血化瘀，行气止痛，祛风通络，解毒消肿。用于跌扑损伤，胃痛，牙痛，风湿痹痛，毒蛇咬伤；外治烧烫伤。"
+            },
+            {
+                name: '金针花', pic: 'https://ts1.cn.mm.bing.net/th/id/R-C.bd2c3d7ecebb7b73b5227321d9da1b55?rik=15X%2f8IX7a58H%2bw&riu=http%3a%2f%2fimg.mm4000.com%2ffile%2fb%2f84%2ff6ab040f27.jpg&ehk=iI7j%2bC6PQMqqcCqBb2L5N7zeVcINKQH6bsk2pi5J%2b9Q%3d&risl=&pid=ImgRaw&r=0',
+                address: '广东云浮中医药职业学院教学楼',
+                lng: 112.200088, lat: 22.67505,
+                information: "金针花又名黄花菜、金针菜、萱草等，金针花性甘、凉，归心、肝、小肠等经。金针花的功效与作用主要有清热利湿、除烦安神、止血、消炎、消食、明目、安神等功效。对吐血、大便带血、小便不通、失眠、乳汁不下等症状均有一定的功效。金针花可以作为病后或者产后的调补食品。金针花功效比较强大，营养价值很高，可以作为常用的食疗药材。"
+            },
+            {
+                name: '桔梗', pic: 'https://www.lvbad.com/uploads/allimg/2003/0T6343307-8.jpg',
+                address: '广东云浮中医药职业学院教学楼',
+                lng: 112.200097, lat: 22.674875,
+                information: "宣肺祛痰、利咽排脓。属化痰止咳平喘药下分类的清化热痰药。"
+            },
+            {
+                name: '香茅', pic: 'https://ts1.cn.mm.bing.net/th/id/R-C.bcba27aebe4ed8ba98f395bb8e8ac673?rik=WrlBMDAd4bEGfQ&riu=http%3a%2f%2fmysunbio.com%2fupLoad%2fimage%2f20150807%2f14389092832899091.jpg&ehk=Dnh5DyFUb1PIfxSMxilI1rj58zL7UaHcYmeryaz9vVE%3d&risl=&pid=ImgRaw&r=0',
+                address: '广东云浮中医药职业学院教学楼',
+                lng: 112.200124, lat: 22.674721,
+                information: "禾本科、香茅属的约55种芳香性植物的统称,亦称为香茅草,为常见的香草之一。因有柠檬香气，故又被称为柠檬草。治疗风湿效果颇佳，治疗偏头痛,抗感染，改善消化功能,除臭、驱虫。抗感染,收敛肌肤,调理油腻不洁皮肤。赋予清新感，恢复身心平衡。"
+            },
+            {
+                name: '活血丹',
+                pic: 'https://ts1.cn.mm.bing.net/th/id/R-C.70cbc8fd3f07c442359b554030ce97ea?rik=Ocpt4HUvasTCFA&riu=http%3a%2f%2fwww.civilcn.com%2fd%2ffile%2fzhishi%2fyljg%2f2013-05-27%2f7c9728c56771ad5917952afb173d7b8a.jpg&ehk=mLk1hip5vBWGwnrJdfZTaQYJXVyvv7ImUPHVHpXXmIA%3d&risl=&pid=ImgRaw&r=0',
+                address: '广东云浮中医药职业学院基础楼',
+                lng: 112.199616, lat: 22.67365,
+                information: "其味辛,性凉，即可口服,又可外用，具有利湿通淋、清热解毒、散瘀消肿等功效。"
+            },
+            {
+                name: '黄精',
+                pic: "https://img14.360buyimg.com/n0/jfs/t1/22865/32/19748/71336/638f281cE08dcbbc6/fb03a3a29bccc18e.jpg",
+                address: '云安区、新兴县和郁南县的山林地带',
+                lng: 111.940791, lat: 23.122835,
+                information: "养阴润燥、止咳化痰、滋补肝肾等。黄精富含黄精甙、黄精内酯、黄精素等多种成分，具有补虚止汗、滋阴润燥、润肺化痰等作用，可用于治疗肺虚咳嗽、痨病、自汗盗汗、脱发等症状。"
+            },
+            {
+                name: '珍珠母',
+                pic: "https://www.yt1998.com/attached/image/20170714/20170714074113_725.jpg",
+                address: '罗定市和云安区的山地和林带中',
+                lng: 111.950791, lat: 23.122835,
+                information: "清热解毒、镇静安神、润肺化痰等。珍珠母富含碳酸钙、鞣质等成分，具有清热解毒、镇定安神、润肺化痰等作用，可用于治疗发热、痰多、咳嗽、失眠、焦虑等症状"
+            },
+
+            {
+                name: '金银花',
+                pic: "https://www.penzai.com/uploads/img/202006/16/1592319313657732.jpg",
+                address: '云安、新兴和罗定等县市',
+                lng: 111.949282, lat: 23.079437,
+                information: "清热去火、解毒消肿、抗菌消炎等。金银花富含黄酮类、糖类、挥发油等成分，具有清热解毒、抗病毒、降血压、抗过敏等作用，可用于治疗感冒、麻疹、痘痘、疮疖等症状。"
+            },
+
+            {
+                name: '灵芝',
+                pic: "https://img.huabaike.com/tukuimgs/168/DSCF5543.jpg",
+                address: '云安区的山地和林带中',
+                lng: 111.862464, lat: 23.073717,
+                information: "增强免疫力、抗肿瘤、调节代谢等。灵芝富含多糖、三萜类化合物、脂肪等成分，具有抗肿瘤、增强免疫力、降低血脂、调节代谢等作用，可用于治疗癌症、肝炎、高血压等症状。"
+            },
+
+
+            {
+                name: '紫金草',
+                pic: "https://photo.tuchong.com/1206372/f/13904145.jpg",
+                address: '云浮市新兴县罗浮山',
+                lng: 112.229568, lat: 22.494994,
+                information: "被广泛应用于中医领域，并获得了很好的疗效。其他功效还包括：清热解毒，利尿通淋，解毒消肿，止咳化痰等。"
+            },
+
+            {
+                name: '丹参',
+                pic: "https://cbu01.alicdn.com/img/ibank/2017/759/821/4855128957_2064642299.jpg",
+                address: '广东省云浮市新兴县',
+                lng: 112.214, lat: 22.708,
+                information: "活血化瘀，清热解毒，消肿止痛"
+            },
+
+            {
+                name: '五味子',
+                pic: "https://p1.ssl.qhimg.com/t01a2fde2dca9797071.jpg",
+                address: '广东省云浮市郁南县',
+                lng: 111.534, lat: 23.235,
+                information: "固肾止泻，润肺止咳，安神益智"
+            },
+
+            {
+                name: '首乌',
+                pic: "https://pic.quanjing.com/td/js/QJ9125786839.jpg",
+                address: '广东省云浮市云安区',
+                lng: 111.877, lat: 23.078,
+                information: "补血益肾，黑发乌须，润肠通便"
+            },
+
+            {
+                name: '牛大力',
+                pic: "https://imgserver.zyctd.com/Images/2020/12/16/21/11/12c57f7dd9814353b3e612bb0f2e9336.jpg",
+                address: '云浮市云城区腰古镇牛头塱村（小阳农业牛大力标准化种植基地）',
+                lng: 112.248566, lat: 22.888639,
+                information: "<br>1.润肺养肾</br>" +
+                    "牛大力有平肝、润肺，养肾补虚，强筋活络之功效，主治肾虚，气虚，腰酸腿痛、风湿病、慢性肝炎、支气管炎，咳嗽，肺结核等有很好的疗效。</br>" +
+                    "2.清热解毒</br>" +
+                    "此外，牛大力有助清热解毒的功效吃煎炸食物过多，通晓熬夜，用牛大力煲汤，有消肿解毒、改善便秘的功效。</br>" +
+                    "3.改善便秘</br>" +
+                    "牛大力除拥有独特香气外，还含有丰富食物纤维，有助改善便秘，牛大力甘平，有补虚润肺、强筋活络的功用"
+            },
+            {
+                name: "川贝",
+                address: "广东省云浮市罗定市", pic: "https://pic.ntimg.cn/file/20190601/18422185_111457166084_2.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "川贝为石斛科植物贝母的根茎，具有润肺止咳、清热化痰、安神止嗽等功效，常用于治疗肺热咳嗽、肺燥咳嗽、口干咽痛等症状。"
+            },
+            {
+                name: "天麻",
+                address: "广东省云浮市罗定市",
+                pic: "https://cbu01.alicdn.com/img/ibank/2017/669/996/4917699966_621055745.jpg  ",
+                lng: 111.538261, lat: 22.772308,
+                information: "天麻为兰科植物，具有益气补血、通络醒脑、平抑肝阳等功效，常用于治疗头痛眩晕、中风偏瘫、失眠多梦等症状。"
+            },
+            {
+                name: "延胡索",
+                address: "广东省云浮市新兴县中洞镇",
+                pic: 'http://img.zyccst.com/upload/upay/779970/2/E5BBB6E883A1E7B4A2EFBC88E58583E883A1EFBC89E7BB9FE4B8AA5F30312E6A7067.jpg ',
+                lng: 112.272499, lat: 22.97366,
+                information: "延胡索为茜草科植物孪叶叶延胡索的干燥根及根茎，具有活血化瘀、祛风理气、暖宫调经等功效，常用于治疗痛经、经闭、产后瘀血等症状。"
+            },
+            {
+                name: "炮姜",
+                address: "广东省云浮市新兴县太平镇居委会",
+                pic: "https://static.xjlz365.com/zhongcaoyao/img_context/20190719094350367.jpg  ",
+                lng: 112.016518, lat: 22.780387,
+                information:
+                    "炮姜为姜科植物姜的根茎，具有温胃止呕、回阳散寒、解毒除湿等功效，常用于治疗腹痛、寒热不适、中暑等症状。"
+            },
+            {
+                name: "白术",
+                address: "广东省云浮市罗定市",
+                pic: "https://www.penzai.com/uploads/img/202006/22/thumb_336_224_1592809080282996.jpg  ",
+                lng: 111.538261, lat: 22.772308,
+                information: "白术为禾本科植物苍术的根茎，具有健脾胃、益气力、利水通便等功效，常用于治疗脾胃虚弱、腹胀、食欲不振、腹泻等症状。"
+            },
+            {
+                name: "五倍子",
+                address: "广东省云浮市罗定市",
+                pic: "https://img.alicdn.com/tfscom/i4/1777394705/TB1zHuNlRfH8KJjy1XbXXbLdXXa_!!0-item_pic.jpg  ",
+                lng: 111.538261, lat: 22.772308,
+                information: "五倍子为植物为实形科植物五倍子的果实，具有止泻涩肠、收敛止血、益肝肾等功效，常用于治疗腹泻、遗尿、带下等症状。"
+            },
+            {
+                name: "补骨脂",
+                address: "广东省云浮市云浮区罗浮山多宝塔",
+                pic: "https://ts1.cn.mm.bing.net/th/id/R-C.ed5dfb087d4b333c779a09ccf99265c7?rik=dPZh4RNOxe9V2w&riu=http%3a%2f%2fwww.meishijr.com%2fd%2fswfup%2f20190618%2f1560851310208.jpg&ehk=dS60bmCfQmnkpELfotp%2fhlOQoBJnFkCklUJS3Pi%2bI7o%3d&risl=&pid=ImgRaw&r=0",
+                lng: 111.989939, lat: 23.079607, information: "补骨脂为桑科植物，具有温中散寒、止痛渗湿、化痰行气等功效，常用于治疗腰腿酸软、肠鸣泻利、咳喘、乳腺增生等症状。"
+            }, {
+                name: "龙胆草",
+                address: "广东省云浮市新兴县赤坑镇滴水村",
+                pic: "https://www.qnong.com.cn/uploadfile/2016/0302/20160302085349579.jpg",
+                lng: 112.22488,
+                lat: 22.77537,
+                information: "龙胆草又称黄芩草，为马鞭草科龙胆属植物，具有清热解毒、活血化瘀、利胆通便等功效，常用于治疗湿热黄疸、痢疾、便秘等症状。"
+            },
+            {
+                name: '巴戟天 ',
+                pic: 'https://img.redocn.com/sheying/20150910/batianzhongyaocai_4947226.jpg',
+                address: ' 广东云山巴戟药材有限公司（以下简称云山巴戟）位于云浮郁南县，公司致力于提供安全、优质、道地的中药材',
+                lng: 111.547895, lat: 22.90855,
+                information: "补肾阳，强筋骨，祛风湿。用于：阳痿遗精，宫冷不孕，月经不调，少腹冷痛，风湿痹痛，筋骨痿软"
+            },
+            {
+                name: "当归", address: "广东省云浮市新兴县大坑镇湖坑村湖坑社区",
+                pic: "https://img95.699pic.com/photo/50133/1811.jpg_wh860.jpg",
+                lng: 112.19366, lat: 22.80269,
+                information: "当归为芹科植物独活属的根部。具补血养血、调经止痛、润肠通便等功效，常用于治疗妇女月经不调、痛经、功能性子宫出血、贫血等症状。"
+            },
+            {
+                name: "柴胡",
+                address: "广东省云浮市罗定市",
+                pic: "https://www.ziyimall.com/file_img/products/63/201804/10/20180410113013D2jWuv2Q.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "柴胡为茜草科风毛菊属植物柴胡的根及地上部分，具有清热解毒、疏肝理气、抗炎抗过敏等功效，常用于治疗肝炎、黄疸、慢性结肠炎、胃炎等症状。"
+            },
+            {
+                name: "石斛",
+                address: "广东省云浮市罗定市荔川县",
+                pic: "https://pic2.zhimg.com/v2-6a8be18f8631d6cee64c9ea3be3b3b19_r.jpg",
+                lng: 111.032538, lat: 22.787898,
+                information: "石斛生长于亚热带山地森林中的兰科植物，具有滋养阴液、清热解毒、润肺止咳等功效，常用于治疗肺热咳嗽、红肿疮毒、眼病、乳腺疾病等症状。"
+            },
+            {
+                name: "黄芪",
+                address: "广东省云浮市罗定市",
+                pic: "https://www.ziyimall.com/file_img/products/63/201801/19/20180119143841Jhmlv8s9.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "黄芪一般为豆科植物黄芪属黄芪的根茎，具有补气养血、益精填髓、提高机体免疫力等功效，常用于治疗气血虚弱、久病体弱、食欲不振、劳动后疲惫等症状。"
+            },
+            {
+                name: "白芍",
+                address: "广东省云浮市罗定市",
+                pic: "https://cbu01.alicdn.com/img/ibank/2017/635/517/3785715536_1373589733.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "白芍为蔷薇科植物芍药的根茎，具有活血化瘀、消炎止痛、镇痛安神等功效，常用于治疗月经不调、痛经、产后瘀血、损伤瘀血、失眠等症状。"
+            },
+            {
+                name: "杜仲",
+                address: "广东省云浮市罗定市",
+                pic: "https://cbu01.alicdn.com/img/ibank/2018/674/457/9257754476_362277932.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "杜仲为榆科胡杨属的常绿乔木，具有补肝肾、强筋骨、滋阴润燥等功效，常用于治疗肝肾不足、腰膝酸软、头晕目眩、高血压等症状。"
+            },
+            {
+                name: "红花",
+                address: "广东省云浮市云城区附城镇马石三村",
+                pic: "https://img.zcool.cn/community/01485c5d402ac5a80120695cf98cbd.jpg@1280w_1l_2o_100sh.jpg",
+                lng: 112.065663, lat: 23.113914,
+                information: "红花为菊科一年生草本植物，具有活血祛瘀、化湿通经、止痛等功效，常用于治疗痛经、月经不调、乳腺炎、跌打损伤等症状。"
+            },
+            {
+                name: "决明子",
+                address: "广东省云浮市罗定市", pic: "https://www.penzai.com/uploads/img/202007/20/1595212198952667.jpg",
+                lng: 111.538261, lat: 22.772308,
+                information: "决明子为豆科经军草属的种子，具有明目、降血压、利尿等功效，常用于治疗眼病、高血压、病后水肿等症状。"
+            },
+            {
+                name: "益母草",
+                address: "广东省云浮市云安区六都镇上坪村",
+                pic: "https://cdn.fanhonghua.net/uploads/2017/05/ymc2.png",
+                lng: 111.937221, lat: 23.151994,
+                information: "益母草为菊科草本植物，具有通经除热、收湿止痛、清肝明目等功效，常用于治疗妇科病、子宫颈炎、风湿病等症状。"
+            }
+        ]
+
+        var mapPoints = herbData.map(function (data) {
+            var point = new BMapGL.Point(data.lng, data.lat);
+            var marker = new BMapGL.Marker(point);
+            marker.setTitle(data.name)
+            // 在标志点上添加中草药名称和基本信息，并绑定事件
+            marker.addEventListener("dblclick", function () {
+                map.centerAndZoom(point, 14);
+            })
+            marker.addEventListener("click", function () {
+                showInfo(data);
+            });
+            return marker;
+        });
+
+
+        // 地图初始化
+        var map = new BMapGL.Map("map");
+        map.centerAndZoom("云浮市", 10);
+        map.enableScrollWheelZoom(true);
+        // 铺满全屏
+        var mapContainer = document.getElementById("map");
+        mapContainer.style.height = window.innerHeight + "px";
+        mapContainer.style.width = window.innerWidth + "px";
+        window.onresize = function () {
+            mapContainer.style.height = window.innerHeight + "px";
+            mapContainer.style.width = window.innerWidth + "px";
+        }
+
+
+        // 将标志点添加到地图上
+        for (var i = 0; i < mapPoints.length; i++) {
+            map.addOverlay(mapPoints[i]);
+        }
+
+
+        // 添加3D控件
+        var navi3DCtrl = new BMapGL.NavigationControl3D();
+        map.addControl(navi3DCtrl);
+
+
+        // 切換按鈕
+        var modeButton = document.getElementById("modeButton");
+        var mode = "herb"; //初始值为A方式
+        function switchMode() {
+            var navPlaceHold = document.getElementById("searchInput");
+            if (mode == "herb") {
+                mode = "nav";
+                navPlaceHold.placeholder = "搜索位置信息";
+                navPlaceHold.title = "输入地名"
+                modeButton.innerHTML = '<img src="../image/nav.svg" alt="" title="地名">'
+            } else {
+                mode = "herb";
+                navPlaceHold.placeholder = "搜索草药信息"
+                navPlaceHold.title = "输入草药名"
+                modeButton.innerHTML = '<img src="../image/herb.svg" alt="" title="草藥名">'
+            }
+        }
+
+
+        // 草藥名搜索
+        function herbSearch() {
+            // 判断中药名是否正确
+            function herbName_tf(query) {
+                for (var index = 0; index < herbData.length; index++) {
+                    if (herbData[index].name === query) {
+                        return index;
+                    }
+                }
+                return null;
+            }
+
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value;
+            const index = herbName_tf(query);
+
+            if (index) {
+                showInfo(herbData[index]);
+                searchInput.value = "";
+                // 定位
+                var point = new BMapGL.Point(herbData[index].lng, herbData[index].lat);
+                map.centerAndZoom(point, 14);
+            } else if (query === "卫星地图") {
+                map.setMapType(BMAP_SATELLITE_MAP); 
+            } else {
+                alert("该草药植物不存在");
+                searchInput.value = "";
+            }
+        }
+
+
+        // 地名搜索功能：根据用户输入的地址或名称进行搜索定位
+        function navSearch() {
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value;
+            // 创建本地搜索对象
+            var local = new BMapGL.LocalSearch(map, {
+                renderOptions: { map: map }
+            });
+            // 开始搜索
+            local.search(query);
+        }
+
+
+        // 搜索
+        function search() {
+            if (mode == "herb") {
+                herbSearch()
+            } else {
+                navSearch()
+            }
+        }
+
+
+        // 搜索按钮的點擊事件
+        searchButton.addEventListener("click", search);
+        // 模式按钮的点击事件
+        modeButton.addEventListener("click", switchMode);
+
+
+        // Enter点击事件
+        function searchKeyPress(e) {
+            // 如果按下了enter键，则触发搜索按钮的点击事件
+            if (e.keyCode === 13) {
+                document.getElementById("searchButton").click();
+            }
+        }
+        // Ctrl点击事件
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && !event.shiftKey && !event.altKey && !event.metaKey) {
+                modeButton.click();
+            }
+        });
+
+
+        // 鼠標聚焦
+        window.onload = function () {
+            var inputBox = document.getElementById("searchInput");
+            inputBox.focus();
+        }
+
+
+        // 展示中草药详细信息
+        function showInfo(data) {
+            // var map = document.getElementById("map");
+            var sidebar = document.getElementById("sidebar");
+
+            document.getElementById("herbInfo").innerHTML = `
+                <h2>${data.name}</h2>
+                <div class="herbImg"><img src=${data.pic}></div>
+                <h3>${data.address}</h3 >
+                <p>${data.information}</p>`;
+            document.getElementById("sidebar").style.zIndex = "99";
+        }
+
+
+        // 创建定位控件
+        var locationControl = new BMapGL.LocationControl({
+            // 控件的停靠位置（可选，默认左上角）
+            anchor: BMAP_ANCHOR_TOP_RIGHT,
+            // 控件基于停靠位置的偏移量（可选）
+            offset: new BMapGL.Size(20, 20)
+        });
+        // 将控件添加到地图上
+        map.addControl(locationControl);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 5. **用户输入一个数，  计算 1 到这个数的累加和** 
+    let startNum = 1
+    let endNum = prompt('Enter the end number: ')
+    let sum = 0
+
+    useWhile()
+    useFor()
+
+    function useWhile() {
+      document.write('while:<br>')
+      while (startNum <= endNum) {
+        sum += startNum
+        startNum++
+      }
+      document.write(`The sum of 1 to ${endNum} is ${sum}.<br>`)
+    }
+
+    function useFor() {
+      document.write('for:<br>')
+      for (let i = startNum; i <= endNum; i++) {
+        sum += i
+      }
+      document.write(`The sum of 1 to ${endNum} is ${sum}.`)
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>探寻中草药足迹</title>
+    <meta name="description"
+        content="探寻中草药足迹-欢迎访问我们的网站！这是一个地图类网站，旨在提供中草药信息的查询服务。通过引入百度地图的API，我们为您提供了一个方便的方式来查找中草药的生长地点、功效等相关信息。无论您是对中草药感兴趣的专业人士还是普通用户，我们希望能够为您提供准确、全面的中草药信息，帮助您更好地了解和利用中草药的优点。" />
+    <meta name="keywords" content="探寻中草药足迹, 中草药, 地图查询, 中草药信息, 生长地点, 功效与用途, 百度地图API, 草药数据, 中药学, 草本植物, 植物分类, 中药文化, 草药研究, 医学知识">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript"
+        src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=XkvQEbTfOQHGCLTiKXZ4EmqK0e9BYbet"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!--创建一个在html列表，每个元素添加点击事件-->
+        <div id="list-container"></div>
+
+        <!-- 翻页按钮区 -->
+        <div class="pageTurnerArea"></div>
+
+        <!-- 版权信息 -->
+        <div class="footer">
+            <p>CopyRight © 2023 M&T</p>
+        </div>
+
+        <div class="logo">
+            <img src="img/logo.png" alt="" />
+        </div>
+
+        <!-- 地图容器 -->
+        <div id="map" style="position: relative"></div>
+
+        <!-- 侧边栏 -->
+        <div id="sidebar">
+            <!-- tips -->
+            <button id="tips" title="更多">
+                <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path id="path1" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path id="path2"
+                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+            </button>
+
+            <!-- 草药信息 -->
+            <div id="herbInfo"></div>
+        </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="search" id="search">
+        <!-- Search button -->
+        <button onclick="findHerbData(query)" id="searchButton" title="搜索">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#707070" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+        </button>
+
+        <input type="text" id="searchInput" onkeypress="searchKeyPress(event)" placeholder="搜索草药信息/地点："
+            title="输入：草药名/地名" />
+
+        <!-- Theme switcher -->
+        <button id="changeNightDaytime" title="切换深色模式">
+            <svg xmlns="http://www.w3.org/2000/svg" id="changeNightDayTimeSvg" width="30" height="30"
+                fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                <path id="changeNightDayTimePath"
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+            </svg>
+        </button>
+    </div>
+</body>
+
+<script type="text/javascript" src="index.js"></script>
+
+</html>

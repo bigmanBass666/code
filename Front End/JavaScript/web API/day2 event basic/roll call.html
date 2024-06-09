@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gradient background</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(45deg, #77a1d3, #79cbca, #e684ae);
+      background-size: 350%;
+      background-position: center;
+      animation: test 2s alternate infinite;
+    }
+
+    @keyframes bgTransition {
+      0% {
+        background-position: 0 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    @keyframes test {
+      from {
+        background-position: 0 50%;
+      }
+      
+      to {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script></script>
+</body>
+
+</html>

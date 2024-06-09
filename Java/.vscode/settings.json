@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "Fuck_jar/**/*.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "cSpell.words": [
+        "asdfasdf"
+    ],
+
+}

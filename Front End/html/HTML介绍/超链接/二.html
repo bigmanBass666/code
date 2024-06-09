@@ -1,0 +1,60 @@
+<!--
+在此任务中，我们希望您填写四个链接，以便它们链接到适当的位置：
+第一个链接应链接到名为blue-whale.jpg的图像，该图像位于当前目录内称为blue的目录中。 
+第二个链接应链接到名为narwhal.jpg的图像，该图像位于名为narwhal的目录中，该目录位于当前目录上方一个目录级别。
+第三个链接应链接到英国谷歌图片搜索。基本 URL 为https://www.google.co.ukimghp ，图像搜索位于名为 的子目录中。
+第四个链接应链接到当前页面最底部的段落。它的 ID 为 bottom。
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Links: Task 2</title>
+    <style>
+    body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: purple;
+    }
+
+    li {
+        color: gray;
+        margin: 0.5em 0;
+    }
+
+    div {
+        height: 600px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <h1>List path tests</h1>
+
+    <ul>
+        <!-- 第一个链接应链接到名为blue-whale.jpg的图像，该图像位于当前目录内称为blue的目录中。 -->
+        <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links/blue/blue-whale.jpg">Link me to the blue whale image</a></li>
+        <!-- 第二个链接应链接到名为narwhal.jpg的图像，该图像位于名为narwhal的目录中，该目录位于当前目录上方一个目录级别。 -->
+        <li><a target="_blank" href="./narwhal/narwhal.jpg">Link me to the narwhal image</a></li>
+        <!-- 第三个链接应链接到英国谷歌图片搜索。基本 URL 为https://www.google.co.uk，图像搜索位于名为imghp的子目录中。 -->
+        <li><a target="_blank" href="https://www.google.co.uk/imghp">Link me to Google image search</a></li>
+        <!-- 第四个链接应链接到当前页面最底部的段落。它的 ID 为 bottom。 -->
+        <li><a href="#bottom">Link me to the paragraph at the bottom of the page</a></li>
+    </ul>
+
+    <div></div>
+
+    <p id="bottom">The bottom of the page!</p>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+( asdfasdfasdfasdfaf )
+{
+  "key": "alt+p",
+  "command": "workbench.action.togglePanel"
+}
+workbench.action.closePanel

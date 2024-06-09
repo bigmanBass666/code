@@ -1,0 +1,7 @@
+<!-- pages/grammar/grammar.wxml -->
+<navigator class="" target="" url="/pages/grammar/update_obj/update_obj" hover-class="navigator-hover" open-type="navigate">
+  /pages/grammar/update_obj/update_obj
+</navigator>
+<navigator class="" target="" url="/pages/grammar/update_arr/update_arr" hover-class="navigator-hover" open-type="navigate">
+  /pages/grammar/update_arr/update_arr
+</navigator>

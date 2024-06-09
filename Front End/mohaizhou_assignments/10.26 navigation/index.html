@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Navigation</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .2s;
+        }
+
+        html {
+            font-size: 1vw;
+        }
+
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #c8c7c5;
+            user-select: none;
+        }
+
+        .itemList {
+            position: relative;
+            margin-top: 5.5vw;
+            width: 42vw;
+            height: 3.5vw;
+            border-radius: 888px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+        }
+
+        /* backgroundColor */
+        .itemList::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: inherit;
+            height: inherit;
+            border-radius: 888px;
+            background-color: #fff;
+            z-index: -1;
+        }
+
+        .itemList:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .4);
+            transform: translateY(-2px);
+        }
+
+        .itemList:active {
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .3);
+            transform: translateY(0);
+        }
+
+        ul {
+            display: flex;
+            width: inherit;
+            height: inherit;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7vw;
+            height: 100%;
+            color: #002fa7;
+            letter-spacing: .1em;
+        }
+
+        .slider {
+            position: absolute;
+            left: 0;
+            width: 7vw;
+            height: inherit;
+            border: .35vw solid white;
+            border-radius: 888px;
+            background-color: #002fa7;
+            z-index: -1;
+        }
+
+        .active {
+            color: #c8c7c5;
+        }
+
+        .prompt {
+            position: absolute;
+            bottom: -7vw;
+            left: -2vw;
+            color: #002fa7;
+            font-weight: bold;
+            letter-spacing: .1em;
+            pointer-events: none;
+            animation: promptAnimation 1s infinite alternate;
+        }
+
+        .arrow {
+            position: absolute;
+            top: -3.2vw;
+            right: -6.3vw;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes promptAnimation {
+            to {
+                opacity: 0;
+            }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            letter-spacing: 0.11em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="itemList">
+
+        <div class="prompt">
+            Click it
+            <div class="arrow">-----------></div>
+        </div>
+
+        <div class="slider"></div>
+
+        <ul>
+            <li data-id="0" class="active">
+                这是首页
+            </li>
+            <li data-id="1">
+                自我介绍
+            </li>
+            <li data-id="2">
+                我的成绩
+            </li>
+            <li data-id="3">
+                我的特长
+            </li>
+            <li data-id="4">
+                我的爱好
+            </li>
+            <li data-id="5">
+                我的作品
+            </li>
+        </ul>
+
+    </div>
+
+    <footer>Copyright © Theta</footer>
+
+
+    <script type="text/javascript">
+        const itemList = document.querySelector('.itemList')
+        const slider = document.querySelector('.slider')
+        const items = document.querySelectorAll('li')
+
+        let i = 0
+        let timerId
+
+        function toggleAnimation() {
+            i++
+            if (i >= items.length) {
+                i = 0
+            }
+            slider.style.left = (7 * i + 'vw')
+            document.querySelector('.active').classList.remove('active')
+            items[i].classList.add('active')
+        }
+
+        timerId = setInterval(function () { toggleAnimation() }, 1000)
+
+        itemList.addEventListener('mouseenter', function () {
+            clearInterval(timerId)
+        })
+
+        itemList.addEventListener('mouseleave', function () {
+            timerId = setInterval(function () { toggleAnimation() }, 1000)
+        })
+
+        itemList.addEventListener('click', function (e) {
+            document.querySelector('.prompt').style.opacity = 0
+            if (e.target.tagName === 'LI') {
+                i = e.target.dataset.id
+                document.querySelector('.active').classList.remove('active')
+                e.target.classList.add('active')
+                slider.style.left = e.target.offsetLeft + 'px'
+            }
+        })
+
+        setTimeout(() => {
+            document.querySelector('.prompt').style.opacity = 0
+        }, 30000);
+    </script>
+</body>
+
+</html>

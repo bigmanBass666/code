@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lifecycle-mounted</title>
+</head>
+
+<body>
+	<div id="v-for">
+		v-for:
+
+		<hr>
+
+		<div v-for="country in countries">
+			{{country}} <br>
+		</div>
+
+		<hr>
+
+		<div v-for="(country, index) in countries">
+			{{index}}--{{country}} <br>
+		</div>
+	</div>
+
+	<script src="js/vue.js"></script>
+	<script>
+		new Vue({
+			el: "#v-for",
+			data() {
+				return {
+					count: 1,
+					countries: ["cn", "usa", "uk", "cr", "汕尾"]
+				}
+			},
+			mounted() {
+				alert("vue mounted.")
+			},
+		})
+	</script>
+</body>
+
+</html>

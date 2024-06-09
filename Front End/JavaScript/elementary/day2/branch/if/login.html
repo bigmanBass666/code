@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 判断用户登录案例需求:
+    // 用户输入,用户名: pink,密码: 123456,则提示登录成功,否则提示登录失败
+    // 分析：
+    // 弹出输入框，分别输入用户名和密码
+    // 通过if语句判断，如果用户名是pink，并且密码是123456，则执行if里面的语句，否则执行else里面的语句。
+    let username = 'pink'
+    let password = '123456'
+
+    let username1 = prompt('Enter the user name:')
+    let password1 = prompt('Enter the password:')
+
+    if (username1 === username && password1 === password) {
+      alert('Login successful.')
+    } else {
+      alert('Login failed.')
+    }
+  </script>
+</body>
+
+</html>

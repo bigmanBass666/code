@@ -1,0 +1,73 @@
+body {
+    background-color: #f4f4f4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    background-color: black;
+    color:white;
+    padding: 5px 10px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+button:hover {
+    background-color: white;
+    color:black
+}
+
+button:active {
+    background-color: pink;
+}
+
+.box1 {
+    background-color: rgb(181, 237, 247);
+    border-top: 3px black solid;
+    border-bottom: 5px pink solid;
+    border-left: 5px purple dotted;
+    border-right: 5px red double;
+
+    border-bottom-style: double;
+
+    padding: 10px;
+
+    margin-bottom: 60px;
+}
+
+.box2 {
+    background-color: aquamarine;
+
+    margin-bottom: 50px;
+
+    border-width: 4px;
+    border-color: pink;
+    border-style: double;
+
+    border-radius: 20px;
+
+    padding: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.box1 h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    word-spacing: 1.5em;
+}
+
+.list li {
+    list-style:circle;
+    list-style-image: url(\Watermelon_Outline.png);
+}
+

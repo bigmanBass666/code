@@ -1,0 +1,39 @@
+{
+  "name": "auto-toggle-activitybar-and-sidebar",
+  "displayName": "auto toggle activityBar and sideBar",
+  "description": "auto toggle activityBar and sideBar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "publisher": "melon",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/paeonia-lactiflora/code/tree/master/auto-toggle-activitybar-and-sidebar"
+  },
+  "icon": "./icon.png",
+  "main": "./extension.js",
+  "contributes": {},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2"
+  }
+}

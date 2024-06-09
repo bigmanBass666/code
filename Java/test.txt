@@ -1,0 +1,51 @@
+i miss my cocoa butter kisses
+hope you smile when you listen
+ain't no competition, just competin' for attention
+and you like "i'm not on no games"
+well, baby i been peepin' and you ain't been the same
+like, who been on your mind?
+who got your time?
+who you been vibin' with and why i can't make you mine?
+you used to be texting me, checking me, calling me your slime
+and now you treat me like my worth less than a dime
+and if we paint a perfect picture we can make it last forever
+and you the only one i want to wear my orange sweater
+i told you i am down for the worse or the better
+but i keep sticking to you cause them four stupid letters
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+you got me singing love songs
+oh this the type of song you tip on four fours & pour up song
+yeahhh
+that make you fall in love song
+that "hey big head, what u on?" make you hit me up song
+double cupped but bae i'm leaning on you,
+you been playing games i'm tryna make you my boo,
+i don't duck no action you buss one and i buss two
+pills of satisfaction i take the red you pop the blue
+and if we paint a perfect picture we can make it last forever
+and you're the only one i want to wear my orange sweater
+i told you i am down for the worse or the better
+but i keep sticking to you cause them four stupid letters
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+you got me singing love songs, love songs, love songs
+
+
+git config --global user.name '实验室207'
+git config --global user.email '1619649679@qq.com'
+
+git config --global user.name '实验室208'
+git config --global user.email '1619649679@qq.com'
+
+git config --global user.name '405'
+git config --global user.email '1619649679@qq.com'
+
+git config --global user.name '403'
+git config --global user.email '1619649679@qq.com'
+
+git config --global user.name '402'
+git config --global user.email '1619649679@qq.com'

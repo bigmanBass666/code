@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：程序随机生成 1~10 之间的一个数字，用户输入一个数字
+    // ①：如果大于该数字，就提示，数字猜大了，继续猜
+    // ②：如果小于该数字，就提示，数字猜小了，继续猜
+    // ③：如果猜对了，就提示猜对了，程序结束
+    let randomNum = Math.floor(Math.random() * (10 + 1)) + 1
+    console.log(randomNum);
+    while (true) {
+      let userNum = +prompt('Enter a number:')
+      if (userNum > randomNum) {
+        alert('too big.')
+      } else if (userNum < randomNum) {
+        alert('too small.')
+      } else {
+        alert(`Congratulation. You guessed the number ${randomNum}.`)
+        break
+      }
+    }
+  </script>
+</body>
+
+</html>

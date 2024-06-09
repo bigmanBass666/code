@@ -1,0 +1,48 @@
+<!--
+将你的音频或者视频文件保存在你电脑上的一个新目录中。
+创建一个新的 HTML 文件在相同的路径下，命名为 index.html。
+在页面上添加 <audio> 和 <video> 标签；并使用浏览器默认的控件来显示它们。
+在当中添加 <source> 标签，并添加 type 属性，以便于浏览器能够找到其能够支持的格式并加载它。
+在 <video> 标签中添加 poster 属性，这会显示在视频播放之前。
+-->
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">超级棒棒糖</h1>
+
+    <center>
+        <video src="freestyle.mp4" loop controls poster="青.jpg" width="720" height="380">
+            <p>what the fuck is this??????</p>
+        </video>
+    </center>
+
+    <h1 align="center">童话里做英雄</h1>
+
+    <center>
+        <audio src="#" controls loop>
+            <p>what the fuck is this??????</p>
+        </audio>
+    </center>
+
+    <center>
+        <iframe src="//player.bilibili.com/player.html?aid=56359932&bvid=BV11441137zA&cid=98489544&page=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720" height="380">
+        </iframe>
+    </center>
+</body>
+
+</html>

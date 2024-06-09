@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>v-on</title>
+</head>
+
+<body>
+	<div id="v-on">
+		v-on:
+		<button v-on:click="show()">v-on:click="show()"</button>
+		<button @click="show()">@click="show()"</button>
+	</div>
+
+	<script src="js/vue.js"></script>
+	<script>
+		new Vue({
+			el: "#v-on",
+			methods: {
+				show() {
+					alert("click")
+				}
+			},
+		})
+	</script>
+</body>
+
+</html>

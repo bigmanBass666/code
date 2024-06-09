@@ -1,0 +1,18 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}">
+  <swiper-item wx:for="{{awesomeList}}" wx:key="id">
+    <image src="{{item.imgSrc}}"></image>
+  </swiper-item>
+</swiper>
+<!-- 九宫格 -->
+<view class="grid-list" hover-class="none" hover-stop-propagation="false">
+  <view class="grid-item" hover-class="none" hover-stop-propagation="false" wx:for="{{gridList}}" wx:key="id">
+    <image class="" src="{{item.icon}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <text class="" selectable="false" space="false" decode="false">{{item.name}}</text>
+  </view>
+</view>
+<!-- 图片 -->
+<view class="img-box" hover-class="none" hover-stop-propagation="false">
+  <image class="" src="/images/link-01.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+  <image class="" src="/images/link-02.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+</view>

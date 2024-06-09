@@ -1,0 +1,46 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            // "command": "D:\\mingw64\\bin\\gcc.exe",
+            "command": "e:\\melon\\apps\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+
+                // 需要编译的目标文件
+                "${file}",
+                // "*.c",  // 多文件配置
+
+                "-o",
+                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe",
+                // "${fileDirname}.exe",  // 统一以文件夹命名  多文件配置
+
+                // "-finput-charset=UTF-8",
+                "-fexec-charset=UTF-8",
+
+                // 编译release版本参数
+                // 优化标志（Optimization Flags）：在发布版本中，你可能希望使用优化编译标志来提高程序的性能。常见的优化标志包括-O1、-O2、-O3等，其中-O3表示最高级别的优化。你可以根据需求选择适当的优化级别。
+                // "-O3",
+
+                // 调试信息（Debug Information）：发布版本通常不需要调试信息，因此可以禁用它们以减小可执行文件的大小。你可以使用-s标志来禁用调试符号表。
+                // "-s"
+            ],
+            "options": {
+                // "cwd": "${fileDirname}\\output"
+                "cwd": "e:\\melon\\apps\\mingw64\\bin"
+                // "cwd": "${fileDirname}"  // 多文件编译配置
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}

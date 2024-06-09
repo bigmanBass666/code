@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022090209</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: none;
+            font-style: italic;
+            line-height: 2em;
+
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            height: 160px;
+            background-color: #000;
+            text-align: center;
+        }
+
+        .logo {
+            margin-left: 20px;
+            margin-top: 34px;
+            float: left;
+            font-size: 2.8em;
+        }
+
+        .logo span {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        .logo .first {
+            color: #fff;
+        }
+
+        .logo .second {
+            width: 85px;
+            height: 55px;
+            background-color: #f7971d;
+            border-radius: 10px;
+            padding-left: 1px;
+            padding-right: 1px;
+
+            color: #000;
+
+        }
+
+        .logo .bg {
+            float: left;
+            width: 85px;
+            height: 55px;
+            line-height: 80px;
+        }
+
+        img {
+            height: 160px;
+        }
+
+        .nav_all {
+            width: 17%;
+            height: 900px;
+            background-color: rgb(65, 65, 65);
+            margin: 0;
+            display: inline-block;
+
+            font-family: serif;
+            font-size: 1.09em;
+        }
+
+        li {
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        a {
+            border-radius: 2px;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        a:hover,
+        button:hover {
+            background-color: #fff;
+        }
+
+        a:active,
+        button:active {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .article {
+            float: right;
+            width: 83%;
+            height: 900px;
+            background-color: #272727;
+        }
+
+        .article * {
+            border-radius: 10px;
+        }
+
+        .article h1 {
+            text-align: center;
+            margin-top: 70px;
+            color: #fff;
+            font-style: normal;
+            font-size: 3em;
+        }
+
+        .article form {
+            padding: 20px;
+            padding-bottom: 0px;
+            border-radius: 10px;
+            border: 1px solid white;
+            width: 500px;
+            height: 370px;
+            margin: 0 auto;
+            margin-top: 40px;
+            background-color: #383838;
+            color: #fff;
+        }
+
+        .article form * {
+            margin-bottom: 30px;
+            font-style: normal;
+        }
+
+        .article .gender {
+            margin-bottom: 5px;
+        }
+
+        .article input,
+        .introduction textarea {
+            font-style: italic;
+        }
+
+        input:hover,
+        textarea:hover,
+        button:hover {
+            box-sizing: border-box;
+            border: 2px solid #383838;
+        }
+
+        .ac_ps input {
+            width: 90%;
+            height: 40px;
+            float: right;
+        }
+
+        .ac_ps span {
+            float: left;
+            line-height: 40px;
+        }
+
+        .introduction span {
+            margin-bottom: 40px;
+            float: left;
+            line-height: 80px;
+        }
+
+        .introduction textarea {
+            float: right;
+            width: 90%;
+            height: 80px;
+            margin-bottom: 40px;
+            resize: none;
+            font-family: sans-serif;
+        }
+
+        button {
+            width: 63px;
+            height: 37px;
+            background-color: #c5c5c5;
+
+            font-size: 0.9em;
+        }
+
+        button[type="submit"] {
+            float: left;
+        }
+
+        button[type="reset"] {
+            float: right;
+        }
+
+        .footer {
+            height: 20px;
+            background-color: #000;
+        }
+
+        .footer p {
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-family: serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="first">云</span>
+            <span class="second">中医</span>
+        </div>
+
+    </div>
+
+    <div class="nav_all">
+        <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+        </ul>
+    </div>
+
+    <div class="article">
+        <div class="login">
+            <h1>Don't Login</h2>
+
+                <form action="">
+                    <div class="gender">
+                        <label>
+                            性别：&nbsp;<input type="radio" name="gender" checked=""> 男
+                        </label>
+                        <label>
+                            &nbsp;&nbsp;&nbsp;<input type="radio" name="gender"> 女
+                        </label>
+                    </div>
+
+                    <div class="ac_ps">
+                        <span>账号：</span><input type="text" placeholder=" Just type." class="account">
+                        <span>密码：</span><input type="password" placeholder=" Just type." class="password">
+                    </div>
+
+                    <div class="introduction">
+                        <span>简介：</span>
+                        <textarea name="" id="" cols="30" rows="10" placeholder=" Just type."></textarea>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">提交</button>
+                        <button type="reset">重置</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>copyright © GGbond.com</p>
+    </div>
+</body>
+
+</html>

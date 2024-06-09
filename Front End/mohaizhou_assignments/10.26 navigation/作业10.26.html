@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav😔</title>
+    <style>
+        /* 1.作业提示请再次为li书写css */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+            /* transition: all .1s; */
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .itemList {
+            width: 600px;
+            margin: 30px;
+
+            letter-spacing: 0.1em;
+        }
+
+        ul {
+            display: flex;
+
+            background-color: #eaf3f9;
+        }
+
+        li {
+            flex: 1;
+
+            padding: 10px 0;
+
+            text-align: center;
+            cursor: pointer;
+        }
+
+        li::selection {
+            background-color: pink;
+        }
+
+        li.active {
+            background-color: #e70000;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+            /* color: #fff; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>作业说明：按照以下图片的效果，编辑本文档中的内容。</p>
+    <p>1.作业提示：书写css </p>
+    <p>2.书写js：
+        （1）写一个函数N
+        （2）书写定时器执行函数N</p>
+    <img src="img/1.gif">
+    <div class="itemList">
+        <ul>
+            <li class="active">
+                首页
+            </li>
+            <li>
+                自我介绍
+            </li>
+            <li>
+                我的成绩
+            </li>
+            <li>
+                我的特长
+            </li>
+            <li>
+                我的爱好
+            </li>
+            <li>
+                我的作品
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        //2.作业提示2
+        //（1）写一个函数N
+        //（2）书写定时器执行函数N
+        const liList = document.querySelectorAll('li')
+
+        let i = 0
+
+        setInterval(() => {
+            i++
+            if (i === liList.length) {
+                i = 0
+            }
+
+            document.querySelector('li.active').classList.remove('active')
+            liList[i].classList.add('active')
+        }, 1000);
+    </script>
+</body>
+
+</html>

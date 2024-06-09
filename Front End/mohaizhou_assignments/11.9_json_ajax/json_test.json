@@ -1,0 +1,96 @@
+{
+  "name": "Tsinghua",
+  "address": "Peking",
+  "major": [
+    {
+      "name": "Computer Science",
+      "classes": [
+        {
+          "name": "class1",
+          "students": [
+            {
+              "name": "Jack",
+              "gender": "male",
+              "age": 15
+            },
+            {
+              "name": "Melody",
+              "gender": "female",
+              "age": 17
+            },
+            {
+              "name": "Jason",
+              "gender": "male",
+              "age": 18
+            }
+          ]
+        },
+        {
+          "name": "class2",
+          "students": [
+            {
+              "name": "Jack",
+              "gender": "male",
+              "age": 15
+            },
+            {
+              "name": "Melody",
+              "gender": "female",
+              "age": 17
+            },
+            {
+              "name": "Jason",
+              "gender": "male",
+              "age": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Communication Engineering",
+      "classes": [
+        {
+          "name": "class1",
+          "students": [
+            {
+              "name": "Jack",
+              "gender": "male",
+              "age": 15
+            },
+            {
+              "name": "Melody",
+              "gender": "female",
+              "age": 17
+            },
+            {
+              "name": "Jason",
+              "gender": "male",
+              "age": 18
+            }
+          ]
+        },
+        {
+          "name": "class2",
+          "students": [
+            {
+              "name": "Jack",
+              "gender": "male",
+              "age": 15
+            },
+            {
+              "name": "Melody",
+              "gender": "female",
+              "age": 17
+            },
+            {
+              "name": "Jason",
+              "gender": "male",
+              "age": 18
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

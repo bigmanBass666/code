@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">按钮</button>
+    <button id="fuck">fuck</button>
+
+    <script>
+        const button = document.getElementById("button");
+        // mouseover event
+        button.addEventListener("mouseover", function () {
+            console.log('over')
+            // button.style.pointerEvents = "none";
+            // button.style.cursor = "not-allowed";
+            button.disabled = true; // 禁用该按钮
+            button.style.cursor = 'not-allowed'; // 将鼠标指针的形状设为“no-allow”
+        });
+        // mouseout event
+        button.addEventListener("mouseout", function () {
+            console.log('out')
+            // button.style.pointerEvents = "";
+            // button.style.cursor = "";
+            button.disabled = false; // 恢复该按钮
+            button.style.cursor = 'pointer'; // 将鼠标指针的形状设为“pointer”
+        });
+        // button click event
+        function myFunction() {
+            alert("按钮被点击了！");
+        }
+        
+        const fuck = document.getElementById("fuck");
+        fuck.addEventListener('click',function () {
+            button.disabled = false; // 恢复该按钮
+            button.style.cursor = 'pointer'; // 将鼠标指针的形状设为“pointer”
+        })
+
+
+        // const button = document.getElementById('button'); // 获取按钮元素
+
+        // button.addEventListener('mouseover', () => {
+        //     button.disabled = true; // 禁用该按钮
+        //     button.style.cursor = 'not-allowed'; // 将鼠标指针的形状设为“no-allow”
+        // });
+
+        // button.addEventListener('mouseout', () => {
+        //     console.log('out')
+        //     button.disabled = false; // 恢复该按钮
+        //     button.style.cursor = 'pointer'; // 将鼠标指针的形状设为“pointer”
+        // });
+
+    </script>
+</body>
+
+</html>

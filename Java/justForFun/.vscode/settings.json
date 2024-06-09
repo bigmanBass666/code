@@ -1,0 +1,12 @@
+{
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Code\\Java/**/*.jar"
+    ],
+    "commentTranslate.source": "Baidu",
+    "errorLens.hintGutterIconPath": "",
+    "errorLens.infoGutterIconPath": "",
+    "errorLens.warningGutterIconPath": "",
+    "errorLens.errorGutterIconPath": "",
+}

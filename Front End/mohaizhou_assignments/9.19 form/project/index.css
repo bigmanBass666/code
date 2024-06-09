@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #f5f5f5;
+  font-size: 1.25em;
+  letter-spacing: 0.1rem;
+  color: #333;
+}
+:root {
+  accent-color: #1f4037;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 30px 15px;
+  height: 100%;
+  width: 1200px;
+  background-color: #fff;
+  overflow: auto;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+b {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 70px;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+input {
+  outline: none;
+  caret-color: #1f4037;
+}
+label {
+  cursor: pointer;
+}
+input[type="file"] {
+  display: none;
+}
+input[type="date"],
+select {
+  transition: all 0.2s;
+}
+input[type="date"]:hover,
+select:hover,
+input[type="date"]:focus,
+select:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+}
+select {
+  margin-left: 15px;
+  padding: 7px;
+  padding-top: 7.5px;
+  padding-right: 6.5px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  outline: none;
+}
+textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.2s;
+}
+textarea:hover,
+textarea:focus,
+textarea:valid {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+}
+.photo {
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+.photo label {
+  padding: 8px;
+  border: 1px solid #1f4037;
+  border-radius: 10px;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.photo label:hover {
+  color: #fff;
+  background: #1f4037;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 20px 0;
+}
+.photo label:active {
+  box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px 0;
+}
+.speciality,
+.workExperience {
+  height: 40px;
+}
+.gender {
+  position: relative;
+}
+.birthday label {
+  margin-left: 5px;
+}
+.wrapper .startingEndingTime {
+  width: auto;
+}
+input[type="radio"],
+input[type="checkBox"] {
+  margin: 0 13px;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1f4037;
+  transition: 0.2s all linear;
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+}
+input[type="radio"]:hover,
+input[type="checkBox"]:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+}
+input[type="radio"]:checked,
+input[type="checkBox"]:checked {
+  border: 8px solid #1f4037;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+}
+/* 自定义外观样式 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* 添加自定义背景和样式 */
+.wrapper form > div {
+  margin-bottom: 50px;
+  width: 350px;
+  line-height: 40.82px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(45deg, #1f4037, #99f2c8);
+  border-radius: 50px;
+}
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field {
+  padding: 7px;
+  transition: all 0.2s;
+}
+::-webkit-datetime-edit-year-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-year-field:focus,
+::-webkit-datetime-edit-day-field:focus,
+::-webkit-datetime-edit-month-field:focus {
+  background-color: #fff;
+  color: #000;
+}
+input[type="date"] {
+  width: 150px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* 自定义选中日期的样式 */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background-color: #0080ff;
+}
+.wrapper .familyStatus {
+  width: 100%;
+}
+.father,
+.mother {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.mother {
+  margin-bottom: 10px;
+}
+h2 {
+  transform: translateY(-35px);
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
+.wrapper .workingKnowledge,
+.wrapper .lastWorkExperience,
+.wrapper .attitude,
+.wrapper .comprehension,
+.wrapper .testPerformance,
+.wrapper .useless {
+  width: 520px;
+}
+.wrapper .buttonArea {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 0;
+  width: 100%;
+  height: 55px;
+}
+.wrapper .buttonArea input[type="submit"],
+.wrapper .buttonArea input[type="reset"] {
+  padding: 12px 25px;
+  border-radius: 100px;
+  border: 1px solid #1f4037;
+  background-color: transparent;
+  transition: all 0.2s;
+  font-size: 1.1em;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+.wrapper .buttonArea input[type="submit"]:hover,
+.wrapper .buttonArea input[type="reset"]:hover {
+  color: #fff;
+  background: #1f4037;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 20px 0;
+  transform: translateY(-6px);
+}
+.wrapper .buttonArea input[type="submit"]:active,
+.wrapper .buttonArea input[type="reset"]:active {
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 7px 0;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85em;
+}

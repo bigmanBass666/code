@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：用户可以选择存钱、取钱、查看余额和退出功能
+    let isExit = false
+    let balance = 0
+
+    while (!isExit) {
+      let choice = prompt('Please select your operation:\n          1. Withdraw\n          2. Deposit\n          3. Check the balance\n          4. Exit')
+      switch (choice) {
+        case '1':
+          withdraw()
+          break
+        case '2':
+          deposit()
+          break
+        case '3':
+          alert(`Your current balance is: ${balance}`)
+          break
+        case '4':
+          isExit = true
+          alert('Exit successful.')  // todo
+          break
+        default:
+          alert('Invalid input.')
+      }
+    }
+
+    function withdraw() {
+      if (balance <= 0) {
+        alert(`Your current balance is : ${balance}, Please make a deposit first.`)
+      }
+      let amount = +prompt('Enter the amount you want to withdraw:')
+      if (amount > balance) {
+        alert(`Insufficient balance: ${balance}`)
+      }
+      if (amount <= 0) {
+        alert('Invalid input.')
+      }
+      balance -= amount
+      alert(`successfully withdrew ${amount}, Your current balance is: ${balance}`)
+    }
+
+    function deposit() {
+      let amount = +prompt('Enter the amount you want to deposit:')
+      if (amount <= 0) {
+        alert('Invalid input.')
+      }
+      balance += amount
+      alert(`successfully deposited ${amount}, Your current balance is: ${balance}`)
+    }
+
+  </script>
+</body>
+
+</html>

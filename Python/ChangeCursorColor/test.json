@@ -1,0 +1,463 @@
+{
+    "workbench.colorTheme": "Moonlight II Italic",
+    "animations.CursorAnimationOptions": {
+		"Color": "#81A9FE",
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "files.autoSave": "afterDelay",
+    "notebook.lineNumbers": "on",
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.askForKernelRestart": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "𝙘": true
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "files.autoSaveDelay": 50,
+    "editor.inlineSuggest.showToolbar": "always",
+    "[sql]": {
+        "editor.defaultFormatter": "ms-mssql.mssql"
+    },
+    "C_Cpp.default.compilerPath": "d:\\MyVisualStudioIDE\\Common7\\IDE\\VsWizard.dll",
+    "lldb.launch.terminal": "external",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+    "C_Cpp.inlayHints.referenceOperator.enabled": true,
+    "workbench.editorAssociations": {
+        "*.exe": "default"
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.fontSize": 14.1,
+    "[c]": {
+        "editor.suggest.insertMode": "insert"
+    },
+    "[cpp]": {
+        "editor.suggest.insertMode": "replace"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.quickSuggestionsDelay": 1,
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.tabs.enabled": false,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSurroundingLinesStyle": "all",
+    "workbench.reduceMotion": "off",
+    "terminal.integrated.smoothScrolling": true,
+    "cSpell.showAutocompleteSuggestions": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.settings.applyToAllProfiles": [ // TODu
+        "animations.Durations",
+        "vim.handleKeys",
+        "vim.hlsearch",
+        "vim.leader",
+        "editor.suggest.snippetsPreventQuickSuggestions",
+        "multiCommand.commands",
+        "todo-tree.tree.showBadges",
+        "vim.statusBarColors.visualblock",
+        "vim.statusBarColors.visualline",
+        "vim.statusBarColors.visual",
+        "vim.statusBarColors.surroundinputmode",
+        "vim.statusBarColors.replace",
+        "vim.statusBarColors.searchinprogressmode",
+        "vim.statusBarColors.normal",
+        "vim.statusBarColors.insert",
+        "vim.statusBarColors.easymotionmode",
+        "vim.statusBarColors.easymotioninputmode",
+        "vim.statusBarColors.commandlineinprogress",
+        "vim.statusBarColorControl",
+        "workbench.editor.tabCloseButton",
+        "tencentCloudTranslate.projectId",
+        "tencentCloudTranslate.secretId",
+        "tencentCloudTranslate.secretKey",
+        "commentTranslate.googleTranslate.mirror",
+        "surround.with.fori",
+        "todo-tree.general.showActivityBarBadge",
+        "todo-tree.general.showIconsInsteadOfTagsInStatusBar",
+        "todo-tree.general.statusBar",
+        "todo-tree.highlights.enabled",
+        "todo-tree.highlights.highlightDelay",
+        "todo-tree.tree.showCountsInTree",
+        "editor.acceptSuggestionOnEnter",
+        "clipboard-manager.snippet.enabled",
+        "clock.dateFormat",
+        "vim.easymotion",
+        "clipboard-manager.onlyWindowFocused",
+        "editor.suggest.localityBonus",
+        "editor.suggestSelection",
+        "commentTranslate.hover.variable",
+        "commentTranslate.hover.string",
+        "commentTranslate.targetLanguage",
+        "editor.lineNumbers",
+        "vim.useSystemClipboard",
+        "workbench.iconTheme",
+        "workbench.startupeditor",
+        "workbench.layoutControl.enabled",
+        "animations.Focus-Dimming-mode",
+        "hexeditor.columnWidth",
+        "hexeditor.showDecodedText",
+        "hexeditor.defaultEndianness",
+        "hexeditor.inspectorType",
+        "workbench.startupEditor",
+        "animations.Focus-Dimming-Mode",
+        "animations.CursorAnimation",
+        "animations.Scrolling",
+        "oneDarkPro.vivid",
+        "animations.Tabs",
+        "vsicons.dontShowNewVersionMessage",
+        "diffEditor.codeLens",
+        "codesnap.showLineNumbers",
+        "workbench.editor.autoLockGroups",
+        "terminal.integrated.cursorBlinking",
+        "terminal.integrated.fontSize",
+        "terminal.integrated.tabs.defaultColor",
+        "editor.mouseWheelZoom",
+        "files.autoGuessEncoding",
+        "terminal.integrated.env.windows",
+        "editor.wordWrap",
+        "debug.showBreakpointsInOverviewRuler",
+        "typescript.locale",
+        "codesnap.transparentBackground",
+        "codesnap.containerPadding",
+        "codesnap.showWindowControls",
+        "better-comments.highlightPlainText",
+        "vscode_custom_css.imports",
+        "editor.smoothScrolling",
+        "editor.cursorBlinking",
+        "editor.cursorSurroundingLinesStyle",
+        "workbench.reduceMotion",
+        "terminal.integrated.smoothScrolling",
+        "cSpell.showAutocompleteSuggestions",
+        "editor.bracketPairColorization.independentColorPoolPerBracketType",
+        "workbench.list.smoothScrolling",
+        "workbench.preferredDarkColorTheme",
+        "editor.quickSuggestions",
+        "editor.quickSuggestionsDelay",
+        "terminal.integrated.tabs.location",
+        "editor.unicodeHighlight.allowedCharacters",
+        "workbench.editorAssociations",
+        "editor.defaultFormatter",
+        "files.autoSave",
+        "notebook.lineNumbers",
+        "explorer.confirmDragAndDrop",
+        "editor.unicodeHighlight.ambiguousCharacters",
+        "editor.minimap.enabled",
+        "explorer.confirmDelete",
+        "files.autoSaveDelay",
+        "editor.inlineSuggest.showToolbar",
+        "workbench.colorTheme",
+        "editor.cursorSmoothCaretAnimation",
+        "editor.fontSize",
+        "editor.snippetSuggestions",
+        "explorer.copyRelativePathSeparator"
+    ],
+    "workbench.editor.autoLockGroups": {
+        "jsProfileVisualizer.cpuprofile.table": true
+    },
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 14.1,
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiRed",
+    "editor.mouseWheelZoom": true,
+    "files.autoGuessEncoding": true,
+    "terminal.integrated.env.windows": {},
+    "console-ninja.featureSet": "Community",
+    "editor.wordWrap": "on",
+    "editor.suggestSelection": "recentlyUsed",
+    "window.dialogStyle": "custom",
+    "debug.showBreakpointsInOverviewRuler": true,
+    "typescript.locale": "zh-CN",
+    "codesnap.transparentBackground": true,
+    "codesnap.containerPadding": "0",
+    "codesnap.showWindowControls": false,
+    "better-comments.highlightPlainText": true,
+    "vscode_custom_css.imports": [
+        // "file:///D:/Code/synthwave84.css",
+        "file:///D:/Code/moonlight.css",
+        "file:///c:/Users/86150/.vscode/extensions/brandonkirbyson.vscode-animations-1.0.14/dist/updateHandler.js",
+    ],
+    "animations.Durations": {
+        "Command-Palette": 300,
+        "Tabs": 300,
+        "Active": 300,
+        "Scrolling": 300,
+        "Smooth-Mode": 300,
+        "Focus-Dimming": 300
+    },
+    "animations.CursorAnimation": true,
+    "animations.Scrolling": "Fade",
+    "oneDarkPro.vivid": true,
+    "animations.Tabs": "Slide",
+    "vsicons.dontShowNewVersionMessage": true,
+    "cph.general.autoShowJudge": false,
+    "diffEditor.codeLens": true,
+    "codesnap.showLineNumbers": false,
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "animations.Focus-Dimming-Mode": "None",
+    "hexeditor.columnWidth": 16,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "vim.hlsearch": true,
+    "vim.leader": " ",
+    // 普通模式下的非递归按键绑定
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { //  编辑器显示悬停信息
+            "before": [
+                "leader",
+                "i"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ],
+        },
+        { // 复制文件或目录绝对路径
+            "before": [
+                "Y"
+            ],
+            "commands": [
+                "copyFilePath"
+            ],
+        },
+        { //  查看: 打开上一个最近使用的编辑器
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.openPreviousRecentlyUsedEditor"
+            ],
+        },
+        { //  格式化
+            "before": [
+                ";"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+        },
+        { //  打开链接
+            "before": [
+                "leader",
+                "l"
+            ],
+            "commands": [
+                "editor.action.openLink"
+            ],
+        },
+        {
+            "before": [
+                "leader",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.focusPanel"
+            ],
+        },
+        {
+            "before": [
+                "<",
+            ],
+            "after": [
+                "<",
+                "<"
+            ]
+        },
+        {
+            "before": [
+                ">",
+            ],
+            "after": [
+                ">",
+                ">"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "m",
+            ],
+            "after": [
+                "z",
+                "M"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "r",
+            ],
+            "after": [
+                "z",
+                "R"
+            ]
+        },
+        { // 折叠
+            "before": [
+                "z",
+                "z",
+            ],
+            "commands": [
+                "editor.toggleFold"
+            ]
+        },
+    ],
+    // 插入模式下的非递归按键绑定
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    // 命令模式下的非递归按键绑定
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    // 可视模式下的非递归按键绑定
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { //  查看: 打开上一个最近使用的编辑器
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.openPreviousRecentlyUsedEditor"
+            ],
+        },
+        { //  编辑器显示悬停信息
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ],
+        },
+    ],
+    // 不知道什么模式
+    "vim.operatorPendingModeKeyBindings": [],
+    // 下面定义的按键将交由vscode进行处理，而不是vscode-vim插件
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-a>": false,
+        "<C-c>": false,
+        // "<C-f>": false,
+        "<C-w>": false,
+        "<C-o>": false,
+        // "<C-y>": false,
+    },
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.renameFileInEditor",
+            "sequence": [
+                "workbench.view.explorer",
+                "renameFile"
+            ]
+        },
+        {
+            "command": "multiCommand.showFocusSidebar",
+            "sequence": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.focusSideBar"
+            ]
+        },
+        {
+            "command": "multiCommand.acceptPreviousSuggestion",
+            "sequence": [
+                "selectPrevSuggestion",
+                "acceptSelectedSuggestion"
+            ]
+        },
+        {
+            "command": "multiCommand.acceptNestSuggestion",
+            "sequence": [
+                "selectNextSuggestion",
+                "acceptSelectedSuggestion"
+            ]
+        },
+    ],
+    "editor.lineNumbers": "relative",
+    "vim.statusBarColors.visualblock": "#86592d",
+    "vim.statusBarColors.visualline": "ab372f",
+    "vim.statusBarColors.visual": "#4b2e2b",
+    "vim.statusBarColors.surroundinputmode": "#826b48",
+    "vim.statusBarColors.replace": "#22202e",
+    "vim.statusBarColors.searchinprogressmode": "#248067",
+    "vim.statusBarColors.insert": "#485b4d",
+    "vim.statusBarColors.easymotionmode": "#7a7374",
+    "vim.statusBarColors.easymotioninputmode": "#5c2223",
+    "vim.statusBarColors.commandlineinprogress": "#ab372f",
+    "vim.statusBarColorControl": true,
+    "leetcode.nodePath": "D:\\Application\\nodejs\\node.exe",
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "D:\\Code\\.leetcode",
+    "leetcode.defaultLanguage": "java",
+    "leetcode.editor.shortcuts": [
+        "submit",
+        "test",
+        "solution",
+        "star",
+        "description"
+    ],
+    "window.menuBarVisibility": "compact",
+    "workbench.editor.tabCloseButton": "off",
+    "tencentCloudTranslate.projectId": 1320311348,
+    "tencentCloudTranslate.secretId": "AKIDwDgErS0ZAf2Phrz9BGNTaccWL5qhR1CG",
+    "tencentCloudTranslate.secretKey": "wd6Z1OZWFpHaidM052qX8arzvfCWq7Gc",
+    "commentTranslate.googleTranslate.mirror": "https://gtranslate.cdn.haah.net",
+    "surround.with.fori": {
+        "label": "fori",
+        "description": "for (let i = 0; ... ; i = i + 1) { ... }",
+        "disabled": false,
+        "snippet": "for (int ${1:i} = ${2:0}; ${1:i} <$3 ${4:count}; ${1:i}++) {\n\t$TM_SELECTED_TEXT\n}$0"
+    },
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBar": "total",
+    "todo-tree.highlights.enabled": false,
+    "todo-tree.highlights.highlightDelay": 50,
+    "todo-tree.tree.showCountsInTree": true,
+    "clipboard-manager.snippet.enabled": false,
+    "clock.dateFormat": "mmmm d  dddd  HH:MM",
+    "vim.easymotion": true,
+    "editor.suggest.localityBonus": true,
+    "clipboard-manager.onlyWindowFocused": false,
+    "vim.useSystemClipboard": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontLigatures": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#062574",
+        "titleBar.activeBackground": "#0834A2",
+        "titleBar.activeForeground": "#FBFCFF",
+        "statusBar.background": "#4b2e2b",
+        "statusBar.noFolderBackground": "#4b2e2b",
+        "statusBar.debuggingBackground": "#4b2e2b"
+    },
+    "workbench.activityBar.visible": false,
+    "workbench.preferredDarkColorTheme": "Moonlight II Italic",
+    "workbench.editor.enablePreview": false,
+}

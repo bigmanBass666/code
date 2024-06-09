@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 写一个打招呼的函数 hi~
+    // 2. 把99乘法表封装到函数里面，重复调用3次
+    sayHi()
+    printMultiplicationTable()
+
+    function sayHi() {
+      console.log('hi~');
+    }
+
+    function printMultiplicationTable() {
+      for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(`${j} x ${i} = ${i * j} `)
+        }
+        document.write('<br>')
+      }
+    }
+  </script>
+</body>
+
+</html>

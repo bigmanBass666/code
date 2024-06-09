@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li {
+            float: left;
+            box-sizing: border-box;
+            width: 20%;
+            border-right: 1px solid #ccc;
+        }
+
+        ul li:last-child {
+            border: none;
+        }
+
+        ul {
+            margin: 0 auto;
+            width: 1200px;
+            list-style: none;
+        }
+
+        ul li a {
+            display: block;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            line-height: 40px;
+        }
+
+        .app {
+            position: relative;
+        }
+
+        .code {
+            position: absolute;
+            top: 41px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        .app:hover .code{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#" class="app">手机微金所<img src="./images/code.jpg" alt="" class="code"></a></li>
+            <li class="last"><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

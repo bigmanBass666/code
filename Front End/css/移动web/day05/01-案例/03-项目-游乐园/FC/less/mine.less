@@ -1,0 +1,33 @@
+@import url(base.less);
+@import url(normalize.less);
+
+@rootSize: 37.5rem;
+
+body {
+    background-color: #f0f0f0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: (50 / @rootSize);
+    background-color: #feca49;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        width: (40 / @rootSize);
+        align-items: center;
+        color: #D78B09;
+        font-size: 11px;
+
+        .iconfont {
+            margin-bottom: (6 / @rootSize);
+            font-size: (24.4 / @rootSize);
+            // color: transparent;
+        }
+    }
+}

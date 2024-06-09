@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6ad9408-b3e9-4753-a027-e39bfac573f4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/10.13/10.13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/10.20 homework/10.20 homework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/10.20 in class/10.20 in class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/10.27 String/10.27 String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/10.8/10.8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.15/11.15.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.17 fish/11.17 fish.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.22 car interface/11.22 car interface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.24 abstract demo/11.24 abstract demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.27 override/11.27 override.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/11.3/11.3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/12.12 fifth assignment/12.12 fifth assignment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../assignments/s1_java_basics/9.27/9.27.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../maven-test/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../maven-test/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../maven-test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../maven-test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../maven-test/src/main/java/com/theta/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/null" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/java/com/theta/MyBatisDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/java/com/theta/mapper/BrandMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/java/com/theta/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/java/com/theta/pojo/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/java/com/theta/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/resources/com/theta/mapper/BrandMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/resources/com/theta/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mybatis-demo/src/test/java/com/theta/test/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.14 Final assignment/html/get_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.14 Final assignment/html/get_in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.14 Final assignment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.14 Final assignment/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 bootstrap-select/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 bootstrap-select/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/css/bootstrap-responsive.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/css/bootstrapValidator.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/additional-methods.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/bootstrapValidator.extend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/bootstrapValidator.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/validateUtil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/mohaizhou_assignments/12.7 validation/validation/js/zh_CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front End/projects/front_end_final_assignment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front End/projects/front_end_final_assignment/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Fuck_jar/utility.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.13/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.13/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.13/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/Autodial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/PalindromicNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/Score.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/Sum_of_a_to_b.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/Three_five.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 homework/src/Water.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 in class/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 in class/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 in class/src/bubbleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.20 in class/src/swap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.25/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.25/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.25/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.27 String/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.27 String/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.27 String/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/bin/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/src/data_type.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/10.8/课后练习.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/card_id.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/ArrayCopy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/IdCardInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/IdCardInfo_bulk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/IsTriangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/MaskSensitiveWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/MegalaspisCordyla.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.15/src/WordNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/src/AbyssalFishes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/src/Crucian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/src/FishDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/src/Fishes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.17 fish/src/FreshWaterFishes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/src/Airplane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/src/Travel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.22 car interface/src/TravelDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.24 abstract demo/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.24 abstract demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.24 abstract demo/src/AbstractClassDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/src/Animals.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/src/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/src/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.27 override/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.3/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/11.3/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/BoyFriend/BoyFriend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/BoyFriend/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/ChineseTeacher/ChineseTeacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/ChineseTeacher/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/ChineseTeacher/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Computer/Computer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Computer/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/CashierDesk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/CashierDesk_ArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/DailyGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/Foods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/Stationery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Goods/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Shape/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Shape/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Shape/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/Shape/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/USB/Computer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/USB/MobilePhone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/USB/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/USB/UDisk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/bin/USB/USB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/BoyFriend/BoyFriend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/BoyFriend/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/ChineseTeacher/ChineseTeacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/ChineseTeacher/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/ChineseTeacher/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Computer/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Computer/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/CashierDesk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/CashierDesk_ArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/DailyGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/Foods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/Stationery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Goods/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Shape/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Shape/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Shape/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/Shape/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/USB/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/USB/MobilePhone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/USB/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/USB/UDisk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/12.12 fifth assignment/src/USB/USB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/9.27/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/9.27/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/9.27/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../justForFun/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/Spy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/SpySkills.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/Fuck_Tom/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/binarySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/bubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/guessNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/bin/fun/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/fun.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/Fuck_Tom/Spy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/Fuck_Tom/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/binarySearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/bubbleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/guessNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../justForFun/src/fun/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../utility/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../utility/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../utility/bin/Shit/fuck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../utility/src/Shit/fuck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MySql/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.11/goods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.18/yep.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.23/db_library.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.23/query.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.25/preparation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.25/yep.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.30 constraint/preparation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.8/yep.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.9/create_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/10.9/yep.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.13.view/view.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.15 procedure/procedure.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.20 circulation/yep.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.27 trigger/customer.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.27 trigger/customer_time-log_trigger.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.27 trigger/my_order.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.27 trigger/preparation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.27 trigger/time_log.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.29 events_function/event.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.29 events_function/function.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.29 events_function/preparation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.29 events_function/time_log.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/4..sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/5.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/6.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/7.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/8.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/11.6/create_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/12.13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/12.13 backups admin/autority.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/12.13 backups admin/student.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/12.13 backups admin/yes.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/12.4 transaction/a.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/9.20/2022090209-刘家暄.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/homework/9.27/2022090209-刘家暄.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/mysql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MySql/student.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../note/Algorithms.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../note/Algorithms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../note/MySQL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apps/VSCode_portable/VSCode-win32-x64-1.85.0/data/user-data/User/clipboard.history.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apps/VSCode_portable/VSCode-win32-x64-1.85.0/data/user-data/User/clipboard.history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apps/VSCode_portable/VSCode-win32-x64-1.85.0/data/user-data/User/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apps/VSCode_portable/VSCode-win32-x64-1.85.0/data/user-data/User/settings.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2baL7fW037VYn9oeLWKaf6BiGMr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/melon/Code/Java/java_web/vscode-tomcat-test"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a6ad9408-b3e9-4753-a027-e39bfac573f4" name="更改" comment="" />
+      <created>1706448077768</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706448077768</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

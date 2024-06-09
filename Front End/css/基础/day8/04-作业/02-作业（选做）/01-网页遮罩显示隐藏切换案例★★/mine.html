@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuck you</title>
+    <style>
+        .box {
+            overflow: hidden;
+            position: relative;
+            margin: 100px auto;
+            width: 711px;
+            height: 400px;
+            background-color: pink;
+            border: 3px solid orange;
+            border-radius: 10px;
+        }
+
+        .sed {
+            transition: all .3s;
+            border-radius: 10px
+        }
+
+        .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 400px;
+            width: 711px;
+            background: #000 no-repeat center;
+            opacity: 0;
+            border-radius: 10px;
+            transition: all .3s;
+        }
+
+        .arr {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s
+        }
+        
+        .box:hover .arr{
+            opacity: 1;
+        }
+
+        .box:hover .mask{
+            opacity: .5;
+        }
+
+        .box:hover .sed{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/sed.jpg" alt="" class="sed">
+        <div class="mask"></div>
+        <img src="./images/arr.png" alt="" class="arr">
+    </div>
+</body>
+</html>

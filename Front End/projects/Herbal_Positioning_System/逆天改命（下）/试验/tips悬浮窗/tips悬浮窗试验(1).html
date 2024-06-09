@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(img/logo.png);
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+            background-position: center;
+            background-size: 50%;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 350px;
+            padding: 5px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.55);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 999;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="tips">点击打开窗口</button>
+
+    
+</body>
+<script>
+    const tips = document.getElementById('tips');
+    const popup = document.createElement('div');
+    popup.innerHTML = `aldskjfafsadfasd`;
+    popup.classList.add('popup');
+    document.body.appendChild(popup);
+    tips.addEventListener('click', () => {
+        console.log('点了按钮一下')
+        popup.style.display = 'block';
+    });
+
+    function shit() {            
+        document.addEventListener('click', (e) => {
+            // if (!popup.contains(e.target)) {
+            //     console.log('!popup.contains(e.target)成立，点了非悬浮窗区域一下')
+            // }
+            // if (e.target !== tips) {
+            //     console.log('e.target !== tips成立，点了非按钮区域一下')
+            // }
+            if (!popup.contains(e.target) && e.target !== tips) {
+                console.log('点了悬浮窗和按钮以外区域一下')
+                popup.style.display = 'none';
+            }
+        });
+    }
+
+    shit()
+</script>
+</html>

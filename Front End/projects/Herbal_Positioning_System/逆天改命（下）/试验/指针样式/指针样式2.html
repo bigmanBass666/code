@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">按钮</button>
+
+    <script>
+        const button = document.querySelector('button');
+        let isInside = false;
+
+        button.addEventListener('mousemove', () => {
+            isInside = true;
+            button.disabled = true;
+            button.style.cursor = 'not-allowed';
+        });
+
+        button.addEventListener('mouseout', () => {
+            if (!isInside) {
+                button.disabled = false;
+                button.style.cursor = 'pointer';
+            }
+        });
+
+        button.addEventListener('mouseenter', () => {
+            isInside = true;
+        });
+
+        button.addEventListener('mouseleave', () => {
+            isInside = false;
+        });
+
+    </script>
+</body>
+
+</html>

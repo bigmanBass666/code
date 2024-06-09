@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 在页面中打印输出10句“月薪过万”需求：使用while循环，页面中打印，可以添加换行效果
+    // 能不能改进，让用户输入打印输出的个数呢？
+    let i = +prompt('Enter the times:')
+    console.log(i);
+    while (i > 0) {
+      document.write(`${i}. 月薪过万<br>`)
+      i--
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "my_pc",
+            "database": "testdb",
+            "username": "root",
+            "password": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "my_u_driver",
+            "database": "fuck",
+            "username": "root",
+            "password": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "school405",
+            "database": "fuck",
+            "username": "root",
+            "password": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "school403",
+            "database": "fuck",
+            "username": "root",
+            "password": "123456"
+        }
+    ],
+    "cSpell.words": [
+        "competin",
+        "fillchar",
+        "interable",
+        "lactiflora",
+        "𝙡𝙤𝙣",
+        "𝙢𝙚",
+        "𝓶𝓮𝓵𝓸𝓷",
+        "𝙢𝙚𝙡𝙤𝙣",
+        "𝙤𝙛",
+        "paeonia",
+        "peepin",
+        "primaryschool",
+        "𝙋𝙧𝙤𝙙𝙪𝙘𝙩",
+        "tryna",
+        "vibin",
+        "yeahhh"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Code\\Java/**/*.jar",
+        // 学校机房配置
+        "d:\\melon\\Code\\Java/**/*.jar",
+        "e:\\melon\\Code\\Java/**/*.jar"
+    ],
+    "C_Cpp.default.compilerPath": "e:\\melon\\apps\\mingw64\\bin\\gcc.exe",
+    "java.debug.settings.onBuildFailureProceed": true,
+    "cmake.configureOnOpen": true,
+    "java.project.sourcePaths": [
+        "Java/justForFun/src",
+        "Java/homework/10.25",
+        "Java/homework/10.20 in class/src",
+        "Java/homework/11.3/src"
+    ],
+}

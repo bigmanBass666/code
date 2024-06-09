@@ -1,0 +1,98 @@
+<view class="note-item">
+  <view class="title">setData() 修改数据</view>
+  <view class="content-bgc pd-sm">
+    <button bind:tap="addNum">+ {{num}}</button>
+    <text class="code" space="nbsp" user-select>
+      this.setData({
+        num: this.data.num + 1
+      })
+    </text>
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">setData() 修改对象数据</view>
+  <view class="content-bgc pd-sm" id="updateObj">
+    <view class="title">ES6 展开运算符</view>
+    <view class="demo">
+      <text>userInfo.id: {{userInfo.id}}</text>
+      <button bind:tap="updateObj" data-way="1">update object</button>
+      <text>userInfo.name: {{userInfo.name}}</text>
+    </view>
+    <text class="code" space="nbsp" user-select>
+      data: {
+        num: 1,
+        userInfo: {
+          id: 1,
+          name: 'melody'
+        },
+      }
+    </text>
+    <text class="code" space="nbsp" user-select>
+      const _userInfo = this.data.userInfo
+      let userInfo = {}
+    </text>
+    <text class="code" space="nbsp" user-select>
+      userInfo = {
+        ..._userInfo,
+        id: _userInfo.name,
+        name: _userInfo.id
+      }
+    </text>
+    <view class="tips">
+      <text user-select>在修改对象类型的数据时，可以使用 ES6 的展开运算符先复制对象，然后利用新值对旧值覆盖的方式修改</text>
+    </view>
+    <view class="title">Object.assign()</view>
+    <view class="demo">
+      <text>userInfo.id: {{userInfo.id}}</text>
+      <button bind:tap="updateObj" data-way="2">update object</button>
+      <text>userInfo.name: {{userInfo.name}}</text>
+    </view>
+    <text class="code" space="nbsp" user-select>
+      userInfo = Object.assign(
+        this.data.userInfo, 
+        { id: _userInfo.name }, 
+        { name: _userInfo.id }
+      )
+    </text>
+    <view class="tips">
+      <text user-select>Object.assign() 从后往前合并或覆盖</text>
+    </view>
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">delete 删除单个属性</view>
+  <view class="content-bgc pd-sm">
+    <view class="demo">
+      <view class="console">userInfo.id: {{userInfo.id}}</view>
+      <view class="console">userInfo.name: {{userInfo.name}}</view>
+      <button class="mt-15" bind:tap="deleteSingle" data-key="id">delete id</button>
+      <button class="mt-15" bind:tap="deleteSingle" data-key="name">delete name</button>
+      <button class="mt-15" bind:tap="addAttr">add</button>
+    </view>
+    <text class="code line" space="nbsp" user-select>delete this.data.userInfo.id</text>
+    <text class="code line" space="nbsp" user-select>delete this.data.userInfo.name</text>
+    <view class="tips">
+      <text user-select>delete 之后还需要再使用setData()更新页面数据</text>
+    </view>
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">rest 删除多个属性</view>
+  <view class="content-bgc pd-sm">
+    <view class="demo">
+      <view class="console">userInfo.id: {{userInfo.id}}</view>
+      <view class="console">userInfo.name: {{userInfo.name}}</view>
+      <view class="console">userInfo.test1: {{userInfo.test1}}</view>
+      <view class="console">userInfo.test2: {{userInfo.test2}}</view>
+      <button class="mt-15" bind:tap="deleteMultiple" data-key="id">delete multiple</button>
+      <button class="mt-15" bind:tap="resetUserInfo">reset</button>
+    </view>
+    <text class="code" space="nbsp" user-select>
+      const { id, test1, test2, ...rest } = this.data.userInfo
+
+      this.setData({
+        userInfo: rest
+      })
+    </text>
+  </view>
+</view>

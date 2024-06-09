@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // 用户输入行数和列数，打印对应的星星！
+    let row = +prompt('Enter the number of rows:')
+    let column = +prompt('Enter the number of columns:')
+    for (let i = 0; i < row; i++) {
+      for (let j = 0; j < column; j++) {
+        document.write('☆ &nbsp')
+      }
+      document.write('<br>')
+    }
+  </script>
+</body>
+
+</html>

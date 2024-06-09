@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    height: 1000px;
+    background-color: #fff;
+    text-align: center;
+}
+
+body {
+    background-color: #dadada;
+
+}
+
+img {
+    transition: all .2s;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+.mask {
+    background: linear-gradient();
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.content {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.content p {
+    width: 800px;
+    margin: 2px auto;
+    padding: 13px;
+    border: 2px solid pink;
+    border-radius: 8px;
+    text-align: left;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // ### 练习题4：
+
+    // **目的:** 复习函数的声明与调用
+
+    // **题目：**封装余额函数
+
+    // **要求:**
+
+    // 1. 运行程序后, 浏览器显示输入确认框(prompt)
+    // 2. 第一个输入确认框提示输入银行卡余额
+    // 3. 第二个输入确认框提示输入当月食宿消费金额
+    // 4. 第三个输入确认框提示输入当月生活消费金额
+    // 5. 输入完毕后,在页面中显示银行卡剩余金额
+    // 6. 提示: 所有功能代码封装在函数内部（函数需要把余额返回）
+    document.write(`The card balance: ${getBalance()}`)
+
+    function getBalance() {
+      let balance = +prompt('Enter the card balance:')
+      let foodAmount = +prompt('Enter the amount of food and lodging for that month:')
+      let livingAmount = +prompt('Enter the current month\'s living expenses:')
+      return balance - foodAmount - livingAmount
+    }
+  </script>
+</body>
+
+</html>

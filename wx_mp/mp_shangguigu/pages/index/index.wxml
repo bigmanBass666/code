@@ -1,0 +1,115 @@
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
+<view class="swiper">
+  <swiper autoplay interval="4000" circular indicator-dots="{{true}}" indicator-color="#fff">
+    <swiper-item wx:for="{{awesomeList}}" wx:key="id">
+      <image src="{{item.imgSrc}}" show-menu-by-longpress></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="info">
+  <text>
+    <text class="iconfont icon-car"></text>
+    text
+  </text>
+  <text>
+    <text class="iconfont icon-medal"></text>
+    text
+  </text>
+  <text>
+    <text class="iconfont icon-time"></text>
+    text
+  </text>
+  <text>
+    <text class="iconfont icon-hearts"></text>
+    text
+  </text>
+</view>
+<view class="good-nav">
+  <view>
+    <navigator class="" target="" url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+      <image class="" src="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"></image>
+      <text class="" user-select space="false" decode="false">text</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator class="" target="" url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+      <image class="" src="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"></image>
+      <text class="" user-select space="false" decode="false">text</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator class="" target="" url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+      <image class="" src="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"></image>
+      <text class="" user-select space="false" decode="false">text</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator class="" target="" url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+      <image class="" src="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"></image>
+      <text class="" user-select space="false" decode="false">text</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator class="" target="" url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+      <image class="" src="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"></image>
+      <text class="" user-select space="false" decode="false">text</text>
+    </navigator>
+  </view>
+</view>
+<view class="good-hot">
+  <scroll-view class="scroll-x" scroll-x="true">
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      <view class="good-item">
+        <image class="" src="/image/lilac.jpg" lazy-load="false" binderror="" bindload="" show-menu-by-longpress></image>
+        <text class="" user-select space="false" decode="false">good1</text>
+        <text class="" user-select space="false" decode="false">77</text>
+      </view>
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      <view class="good-item">
+        <image class="" src="/image/mint_green.jpg" lazy-load="false" binderror="" bindload="" show-menu-by-longpress></image>
+        <text class="" user-select space="false" decode="false">good2</text>
+        <text class="" user-select space="false" decode="false">77</text>
+      </view>
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      <view class="good-item">
+        <image class="" src="/image/pink.jpg" lazy-load="false" binderror="" bindload="" show-menu-by-longpress></image>
+        <text class="" user-select space="false" decode="false">good3</text>
+        <text class="" user-select space="false" decode="false">77</text>
+      </view>
+    </view>
+    <view class="" hover-class="" hover-stop-propagation="false">
+      <view class="good-item">
+        <image class="" src="/image/lilac.jpg" lazy-load="false" binderror="" bindload="" show-menu-by-longpress></image>
+        <text class="" user-select space="false" decode="false">good4</text>
+        <text class="" user-select space="false" decode="false">77</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- note -->
+<view class="note">
+  <view class="title">
+    <text>note</text>
+  </view>
+  <view class="content">
+    <navigator class="" target="" url="/pages/event/event" hover-class="navigator-hover" open-type="navigate">
+      <text class="navTitle">Event system</text>
+      <text class="iconfont icon-arrow"></text>
+    </navigator>
+    <navigator class="" target="" url="/pages/grammar/grammar" hover-class="navigator-hover" open-type="navigate">
+      <text class="navTitle">WXML grammar</text>
+      <text class="iconfont icon-arrow"></text>
+    </navigator>
+    <navigator class="" target="" url="/pages/event/event" hover-class="navigator-hover" open-type="navigate">
+      <text class="navTitle">some notes</text>
+      <text class="iconfont icon-arrow"></text>
+    </navigator>
+    <navigator class="" target="" url="/pages/event/event" hover-class="navigator-hover" open-type="navigate">
+      <text class="navTitle">some notes</text>
+      <text class="iconfont icon-arrow"></text>
+    </navigator>
+  </view>
+</view>

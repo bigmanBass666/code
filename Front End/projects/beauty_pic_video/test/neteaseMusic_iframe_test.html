@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>netEaseMusic_iframe_test</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+            }
+
+            iframe {
+                margin: auto;
+            }
+
+            #player {
+                /* width: 100px !important;
+                height: 100px !important; */
+            }
+        </style>
+    </head>
+    <body>
+        <button id="switch">dark</button>
+        <button id="player">play song</button>
+        <iframe
+            frameborder="no"
+            border="0"
+            marginwidth="0"
+            marginheight="0"
+            width="298"
+            height="52"
+            src="//music.163.com/outchain/player?type=2&id=1854548201&auto=0&height=32"
+        ></iframe>
+
+        <script>
+            $(function () {
+                $(window).on('click', function (e) {
+                    console.log(e.target)
+                })
+            })
+        </script>
+    </body>
+</html>

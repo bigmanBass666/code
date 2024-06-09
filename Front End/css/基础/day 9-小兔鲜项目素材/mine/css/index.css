@@ -1,0 +1,298 @@
+/* index页面的样式表 */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: #fff;
+}
+
+.aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 500px;
+    width: 251px;
+    background-color: rgb(0, 0, 0, .8);
+}
+
+.aside li {
+    line-height: 50px;
+}
+
+.aside li a {
+    display: block;
+    position: relative;
+    height: 50px;
+    padding-left: 36px;
+    color: #fff;
+    transition: all .1s;
+}
+
+.aside span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.aside li a::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 11px;
+    top: 19px;
+    right: 19px;
+    background-image: url("../images/sprites.png");
+    background-position: -80px -110px;
+}
+
+.aside li a:hover {
+    background-color: #27ba9b;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 260px;
+    background-image: url("../images/sprites.png");
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-image: url("../images/sprites.png");
+    background-position: -23px -60px;
+}
+
+ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+}
+
+ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 25px;
+    border-radius: 50%;
+    background-color: rgba(225, 225, 225, .43);
+}
+
+.current {
+    background-color: #fff;
+}
+
+.goods .hd {
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    height: 114px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd span {
+    margin-right: 35px;
+    font-size: 29px;
+    color: #333;
+}
+
+.goods .hd a {
+    float: right;
+}
+
+.goods .bd ul li{
+    position: relative;
+    float: left;
+    width: 304px;
+    height: 405px;
+    margin-right: 8px;
+    background-color: #f0f9f4;
+}
+
+.goods .bd ul li:last-child {
+    margin-right: 0;
+}
+
+.goods .bd img {
+    height: 305px;
+}
+
+.goods .bd h3 {
+    margin: 22px 0 10px;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.goods .bd div {
+    text-align: center;
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.goods .bd div span {
+    font-size: 23px;
+}
+
+.goods b {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    display: inline-block;
+    border: 1px solid #27ba9b;
+    border-radius: 5px;
+    width: 28px;
+    height: 51px;
+    color: #27ba9b;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.shengxian .hd{
+    height: 96px;
+    line-height: 96px;
+}
+
+.shengxian .hd h2 {
+    float: left;
+    font-size: 29px;
+    color: #333;
+    font-weight: normal;
+}
+
+.shengxian .hd .more {
+    float: right;
+    color: #999;
+}
+
+.shengxian .hd ul {
+    float: right;
+    margin-right: 58px;
+}
+
+.shengxian .hd li {
+    float: left;
+}
+
+.shengxian .hd li a {
+    padding: 3px 7px;
+    margin-left: 6px;
+    border-radius: 5px;
+    transition: all .1s;
+}
+
+.shengxian .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.shengxian .left {
+    float: left;
+}
+
+.shengxian .right {
+    float: left;
+    padding-left: 7px;
+    width: 1000px;
+    height: 610px;
+}
+
+.shengxian .right li {
+    position: relative;
+    float: left;
+    width: 242px;
+    height: 304px;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    padding: 18px 29px 0;
+}
+
+.shengxian .right li:nth-child(4n) {
+    margin: 0;
+}
+
+.shengxian .right li img {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.shengxian .right li h3,
+.type {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.shengxian .right li .price {
+    margin-top: 5px;
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.shengxian .right li b {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.shengxian .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 242px;
+    height: 304px;
+    border: 2px solid #27ba9b;
+    border-radius: 5px;
+    transition: all .2s;
+    opacity: 0;
+}
+
+.shengxian li:hover .mask {
+    opacity: 1;
+}
+
+.shengxian .similarity {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 84px;
+    padding-top: 12px;
+    background-color: #27ba9b;
+    text-align: center;
+}
+
+.similarity p {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 125px;
+    border-bottom: 1px solid #a9dbcc;
+    padding-bottom: 7px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.similarity a {
+    font-size: 13px;
+    color: #fff;
+}
+

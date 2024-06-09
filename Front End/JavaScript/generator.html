@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function createGenerator(end) {
+      let state = 0;  // state
+      return function () {
+        if (state <= end) {
+          return state++;
+        } else {
+          return "没有了";
+        }
+      };
+    }
+
+    let n = 10
+    let pp = createGenerator(n);
+    for (let i = 0; i < n + 2; i++) {
+      console.log(pp());
+    }
+    // console.log(pp()); //第一次输出是0
+    // console.log(pp()); //第二次输出是1
+    // console.log(pp()); //第三次输出是2
+    // // ...
+    // console.log(pp()); //第11次输出是“没有了”
+  </script>
+</body>
+
+</html>

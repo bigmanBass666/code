@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>搜索模式切换</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0%;
+    }
+
+    body {
+      background-color: #a8a8a8;
+    }
+
+    button {
+      border: none;
+      border-radius: 100%;
+      margin: 10% 50%;
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+
+      cursor: pointer;
+    }
+
+    button img {
+      width: 35px;
+      margin-top: 2px;
+      /* margin-left: 1px; */
+    }
+
+    button img[title="地名"] {
+      width: 50px;
+      /* vertical-align: auto; */
+      /* line-height: 20px; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <input type="text" id="searchBox"> -->
+  <div class="box">
+    <button id="modeButton"><img src="../image/herb.svg" alt="" title="草藥名"></button>
+  </div>
+  
+  <script>
+    var modeButton = document.getElementById("modeButton");
+    var mode = "herb"; //初始值为A方式
+    modeButton.addEventListener("click", function () {
+      if (mode == "herb") {
+        mode = "var";
+        // modeButton.innerHTML = '<svg xmlns = "http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox = "0 0 24 24"stroke - width="20" stroke = "#000" fill = "none" stroke - linecap="round" stroke - linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>';
+        modeButton.innerHTML = '<img src="../image/nav.svg" alt="" title="地名">'
+      } else {
+        modeButton.innerHTML = '<img src="../image/herb.svg" alt="" title="草藥名">'
+        mode = "herb";
+      }
+    });
+    function search() {
+      var query = document.getElementById("searchInput").value;
+      if (mode == "herb") {
+        // A方式搜索
+        // ...
+        console.log("A方式搜索: " + query);
+      } else {
+        // B方式搜索
+        // ...
+        console.log("B方式搜索: " + query);
+      }
+    }
+  </script>
+</body>
+
+</html>

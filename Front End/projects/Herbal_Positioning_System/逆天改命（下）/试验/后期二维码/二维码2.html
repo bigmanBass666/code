@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+        }
+
+        .QRbtnUs {
+            position: relative;
+        }
+
+        button {
+            /* margin: 150px 42px; */
+            top: 200px;
+            left: 42px;
+            position: absolute;
+        }
+
+        #QR {
+            width: 150px;
+            position: absolute;
+            transition: all 0.8s ease-out;
+            opacity: 0;
+        }
+
+        #QR img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="QRbtnUs">
+        <div id="QR">
+            <img src="./二维码.jpg" alt="">
+            <p>微信扫描二维码，关注我们的公众号</p>
+        </div>
+        
+        <button id="QRbtn">联系我们</button>
+    </div>
+</body>
+</html>
+
+<script>
+    let QRbtn = document.getElementById('QRbtn');
+    let QR = document.getElementById('QR');
+
+    QRbtn.addEventListener('mouseenter', () => {
+        QR.style.opacity = '1';
+    })
+    
+    QRbtn.addEventListener('mouseleave', () => {
+        QR.style.opacity = '0';
+    })
+</script>

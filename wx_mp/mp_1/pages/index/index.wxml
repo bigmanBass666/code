@@ -1,0 +1,40 @@
+<!-- index.wxml -->
+<view class="" hover-class="none" hover-stop-propagation="false">{{info}}</view>
+<image src="{{imgSrc}}" mode="aspectFit"></image>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  {{randomNum}} is {{randomNum >= 5 ? 'bigger than 5' : 'smaller than 5'}}
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  Random number within 100: {{randomNumFixed}}
+</view>
+<button type="primary" bind:tap="btnTapHandler">button</button>
+<button type="primary" bind:tap="changeCount">增加次数 {{count}}</button>
+<view class="h3" hover-class="none" hover-stop-propagation="false">事件传参:</view>
+<button type="primary" bind:tap="btnTap2" data-info="{{2}}">+2</button>
+<view class="h3" hover-class="none" hover-stop-propagation="false">bindinput:</view>
+<!-- <input bindinput="inputHandler"></input> -->
+<input class="" placeholder="this is a input" placeholder-style="" placeholder-class="input-placeholder" bindinput="inputHandler"></input>
+<view class="h3" hover-class="none" hover-stop-propagation="false">实现文本框和 data 之间的数据同步:</view>
+<input class="" value="{{msg}}" type="text|number|idcard|digit|time|date" placeholder="" placeholder-style="" placeholder-class="input-placeholder" maxlength="140" focus="false" bindinput="inpHandler" bindfocus="" bindblur="" bindconfirm=""></input>
+<view class="h3" hover-class="none" hover-stop-propagation="false">条件渲染:</view>
+<view wx:if="{{type === 1}}">male</view>
+<view wx:elif="{{type === 2}}">female</view>
+<view wx:else>other</view>
+<view class="h3" hover-class="none" hover-stop-propagation="false">列表渲染:</view>
+<view class="" wx:for="{{arr1}}" wx:key="index">index: {{index}}, item: {{item}}</view>
+<view class="h4">-更改默认索引名index和默认项名item</view>
+<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx">
+  index: {{idx}}, item: {{itemName}}
+</view>
+<view class="h4">-wx:key提高渲染效率</view>
+<view class="username" wx:for="{{userList}}" wx:key="id">{{item.name}}</view>
+<view class="h3">数据请求</view>
+<button bind:tap="getInfo" type="primary">发起get请求</button>
+<button bind:tap="postInfo" type="primary">发起post请求</button>
+<view class="h4">声明式导航</view>
+<navigator url="/pages/home/home" open-type="switchTab">声明式导航跳转 tabBar页面</navigator>
+<navigator url="/pages/logs/logs" open-type="navigate">声明式导航跳转 非tabBar页面</navigator>
+<navigator delta="1" open-type="navigateBack">声明式导航跳转 后退</navigator>
+<view class="h4">编程式导航</view>
+<button bindtap="gotoHome" type="primary">导航至tabBar页面</button>
+<button bindtap="gotoLogs" type="primary">导航至非tabBar页面</button>

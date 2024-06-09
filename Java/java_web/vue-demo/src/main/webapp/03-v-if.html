@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>v-if</title>
+	<style>
+		#v-id>div {
+			background-color: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="v-if">
+		v-if:
+		<!-- v-if这些控制的是渲染与否 -->
+		<div v-if="count == 1">div1</div>
+		<div v-else-if="count == 2">div2</div>
+		<div v-else-if="count == 3">div3</div>
+		<div v-else>v-else div</div>
+
+		<input v-model="count">
+
+		<!-- v-show 控制的是display -->
+		<div v-show="count == 0">v-show</div>
+	</div>
+
+	<script src="js/vue.js"></script>
+	<script>
+		new Vue({
+			el: "#v-if",
+			data() {
+				return {
+					count: 1
+				}
+			},
+		})
+	</script>
+</body>
+
+</html>

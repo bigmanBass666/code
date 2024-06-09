@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.cloud img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    animation: move 1s alternate infinite;
+}
+
+.cloud :first-child {
+    margin-left: -300px;
+    top: 20px;
+}
+
+.cloud :nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation-delay: .2s;
+}
+
+.cloud :last-child {
+    margin-left: -550px;
+    top: 200px;
+    animation-delay: .4s;
+}
+
+@keyframes move {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+.san {
+    position: absolute;
+    /* transform: translate(530px, 240px); */
+    left: 530px;
+    top: 240px;
+    animation: up .8s infinite alternate;
+}
+
+@keyframes up {
+    to {
+        /* transform: translate(530px, 200px); */
+        transform: translateY(-20px);
+    }
+}
+
+.shit {
+    position: absolute;
+    bottom: 60px;
+    left: 545px;
+}
+
+.shit img {
+    height: 135px;
+    margin-right: 130px;
+    animation: up 1s infinite alternate;
+}
+
+.shit img:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.shit img:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.shit img:last-child {
+    animation-delay: .5s;
+}
+
+.font {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+
+.font:hover {
+    transform: scale(1.03) translate(-50%, -50%);
+}

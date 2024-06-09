@@ -1,0 +1,33 @@
+<!--
+在此任务中，我们希望您将一个简单的音频文件嵌入到页面上。您需要：
+将音频文件的路径添加到适当的属性中，以将其嵌入到页面上。音频称为 audio.mp3，它位于当前文件夹内名为 media的文件夹中。  
+添加一个属性以使浏览器显示一些默认控件。
+为不支持 的浏览器添加一些适当的回退文本。<audio>
+-->
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        audio {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basic audio embed</h1>
+    <figure>
+        <audio
+            scr="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding/media/audio.mp3"
+            controls loop></audio>
+        <figcaption>哈哈哈哈哈哈哈哈哈</figcaption>
+    </figure>
+</body>
+
+</html>

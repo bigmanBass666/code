@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：将数组 [2, 0, 6, 1, 77, 0, 52, 0, 25, 7] 中的 0 去掉后，形成一个不包含 0 的新数组
+    useSplice()
+    document.write('<br>')
+    usePush()
+
+    // splice()
+    function useSplice() {
+      let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+          arr.splice(i, 1)
+        }
+      }
+      document.write(arr)
+    }
+
+    // push()
+    function usePush() {
+      let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+      let newArr = []
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+          newArr.push(arr[i])
+        }
+      }
+      document.write(newArr)
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let text1 = "fsdfsdf-zhangsan@163.com^uuifushdfjh"
+    //求字符串长度
+    console.info(text1.length);
+    //截取-和^之间的邮箱地址，并使用console.info输出
+    let startIndex = text1.indexOf('-') + 1
+    let endIndex = text1.indexOf('^')
+    console.info(text1.substring(startIndex, endIndex))
+    //把邮箱地址中的账号名称截取出来，并使用console.info输出
+    console.info(text1.split('@')[0])
+    //把text1中的字符串转成大写并输出。 !
+    console.info(text1.toUpperCase())
+  </script>
+</body>
+
+</html>

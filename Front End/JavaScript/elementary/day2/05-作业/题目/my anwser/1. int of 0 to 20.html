@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 打印0-20之间的整数, 将每个数输出到控制台
+    let i = 0
+    use_while()
+    use_for()
+
+    // while
+    function use_while() {
+      document.write('while<br>')
+      while (i <= 20) {
+        document.write(i + ' ')
+        i++
+      }
+      document.write('<br>while<br>')
+    }
+
+    // for
+    function use_for() {
+      document.write('<br>for<br>')
+      for (let i = 0; i <= 20; i++) {
+        document.write(i + ' ')
+      }
+      document.write('<br>for<br>')
+    }
+  </script>
+</body>
+
+</html>

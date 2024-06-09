@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* input:valid {
+            border-color: green;
+            background-color: lightgreen;
+        } */
+
+        /* input:invalid {
+            border-color: red;
+            background-color: lightpink;
+        } */
+
+        /* input:invalid::before {
+            content: "请填写此字段";
+            color: red;
+        } */
+
+        * {
+            /* bottom: 0;
+            padding: 0; */
+            box-sizing: border-box;
+        }
+
+        input {
+            border: 1px solid #000;
+            border-radius: 5px;
+            /* 或者： */
+            outline: none;
+        }
+
+        /* input:focus, */
+        /* input:focus { */
+        input:hover {
+            border: 1px solid pink;
+        }
+
+
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7f9;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4a5568;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #718096;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="/login" method="post">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required value="jjj"><br>
+
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="登录">
+    </form> -->
+    <form action="https://www.baidu.com" method="GET">
+        <p>
+            <label>姓名：</label><input type="text" name="username" value="11" />
+        </p>
+        <p>
+            <label>密码：</label><input type="password" name="password" />
+        </p>
+        <p>
+            <label>性别：</label>
+            <input type="radio" name="gender" value="0" /> 男
+            <input type="radio" name="gender" value="1" /> 女
+        </p>
+        <p>
+            <label>爱好：</label>
+            <input type="checkbox" name="like" value="sing" /> 唱歌
+            <input type="checkbox" name="like" value="run" /> 跑步
+            <input type="checkbox" name="like" value="swiming" /> 游泳
+        </p>
+        <p>
+            <label>照片：</label>
+            <input type="file" name="person_pic">
+        </p>
+        <p>
+            <label>个人描述：</label>
+            <textarea name="about"></textarea>
+        </p>
+        <p>
+            <label>籍贯：</label>
+            <select name="site">
+                <option value="0">北京</option>
+                <option value="1">上海</option>
+                <option value="2">广州</option>
+                <option value="3">深圳</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" name="" value="提交">
+            <input type="reset" name="" value="重置">
+        </p>
+    </form>
+    <hr>
+    <form action="#">
+        <p><label for="name">name: </label><input id='name' type="text" name="name"></p>
+        <p><label for="password">password: </label><input type="password" name="password" id="password"></p>
+        <p><label for="gender">gender: </label>
+            <label><input type="radio" name="gender">male</label>
+            <label><input type="radio" name="gender">female</label>
+        </p>
+        <p>
+            hobby:
+            <label>
+                <input type="checkbox" name="hobby">
+                singing
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" id="hobby">
+                running
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" id="">
+                swimming
+            </label>
+        </p>
+        <p>
+            photo:
+            <input type="file" name="photo" id="photo">
+        </p>
+        <p>
+            your descriptions:
+            <textarea name="about" id="about"></textarea>
+        </p>
+        <p>
+            native place:
+            <select name="nativePlace" id="nativePlace">
+                <option value="">1汕尾</option>
+                <option value="" selected>2汕尾</option>
+                <option value="">3汕尾</option>
+                <option value="">4汕尾</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </p>
+    </form>
+    <!-- <form>
+        <label>
+            <input type="radio" name="color" value="red">
+            红色
+        </label>
+        <label>
+            <input type="radio" name="color" value="blue">
+            蓝色
+        </label>
+        <label>
+            <input type="radio" name="color" value="green">
+            绿色
+        </label>
+    </form> -->
+
+</body>
+
+</html>

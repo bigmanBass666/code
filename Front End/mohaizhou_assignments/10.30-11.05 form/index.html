@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Awesome Form</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/inputStyle.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="prompt">hover me --></div>
+	<div class="box">
+		<div class="formBox">
+			<form action="">
+				<!-- 姓名 -->
+				<div class="name inputBox">
+					<input type="text" id="name" required="required" autofocus autocomplete="off">
+					<span>请输入姓名</span>
+					<i></i>
+				</div>
+
+				<!-- 身份证 -->
+				<div class="idNumber inputBox">
+					<input type="number" name="idNumber" id="idNumber" required="required">
+					<span>请输入18位身份证号</span>
+					<i></i>
+				</div>
+
+				<!-- 班级 -->
+				<div class="dept choiceBox">
+					<input type="radio" name="dept" value="选择班级:" required>
+					<input type="radio" name="dept" value="计算机1班">
+					<input type="radio" name="dept" value="计算机2班">
+					<input type="radio" name="dept" value="计算机3班">
+					<input type="radio" name="dept" value="计算机4班">
+				</div>
+
+				<!-- 兴趣爱好 -->
+				<h3 class="hobbiesTitle">爱好:</h3>
+				<div class="hobbies choiceBox">
+					<input type="checkbox" name="hobbies" value="篮球" data-emoji="🏀">
+					<input type="checkbox" name="hobbies" value="足球" data-emoji="⚽">
+					<input type="checkbox" name="hobbies" value="读书" data-emoji="📕">
+					<input type="checkbox" name="hobbies" value="电影" data-emoji="🎦">
+					<input type="checkbox" name="hobbies" value="音乐" data-emoji="🎵">
+				</div>
+
+				<!-- 自我介绍 -->
+				<div class="selfIntroduction">
+					<textarea name="info" placeholder="自我介绍"></textarea>
+				</div>
+
+				<input type="submit" value="submit" id="submitBtn" class="btn">
+			</form>
+		</div>
+
+
+
+		<div class="tableBox">
+			<div class="tableContainer">
+				<table>
+					<thead>
+						<tr>
+							<th>字段</th>
+							<th>值</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="nameTr">
+							<td>姓名</td>
+							<td></td>
+						</tr>
+						<tr id="idNumberTr">
+							<td>身份证</td>
+							<td></td>
+						</tr>
+						<tr id="birthdayTr">
+							<td>生日</td>
+							<td></td>
+						</tr>
+						<tr id="genderTr">
+							<td>性别</td>
+							<td></td>
+						</tr>
+						<tr id="deptTr">
+							<td>班级</td>
+							<td></td>
+						</tr>
+						<tr id="hobbiesTr">
+							<td>兴趣爱好</td>
+							<td></td>
+						</tr>
+						<tr id="selfIntroductionTr">
+							<td>自我介绍</td>
+							<td id="awesomeTd">
+								<div id="awesomeTextarea"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<button id="backBtn" class="btn">Back</button>
+		</div>
+	</div>
+
+	<footer>Copyright © Theta</footer>
+	<script src="./js/index.js"></script>
+	<!-- 
+			//可以为上面的html元素增加id属性或者name属性
+			//获取姓名、身份证……等值，生日和性别的值要先设置值或选中再取值
+			
+			//从身份证中取出生日（7-14位）填入到生日框中
+			//身份证第17位为奇数设置性别男选中，偶数设置性别女选中
+			//兴趣爱好拼成一个以逗号隔开的字符串类似“篮球,读书,看电影”
+				
+				
+			//仿照下面的方法并把获取到的表单元素对应娥全部的值填入到右表中（记得删除），
+			//下面的例子可以把值输入到,tbody下的第一个tr 下的第二个td
+			//tr:eq(0)序号为0的第一个tr -->
+</body>
+
+</html>

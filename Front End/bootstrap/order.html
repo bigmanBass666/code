@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 Bootstrap 的 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- 引入 Bootstrap 的 JavaScript 文件，需要先引入 Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .nav {
+      background-color: pink;
+    }
+
+    .main {
+      background-color: skyblue;
+    }
+
+    .banner {
+      height: 300px;
+      background-color: darkmagenta;
+
+      color: #fff;
+    }
+
+    .banner > .row {
+      align-items: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row banner col-md-12">
+
+      <div class="row">
+        <h3 class="col-md-12">order-* 要写全(每个元素都要写???)</h3>
+      </div>
+
+      <div class="row">
+        <h3 class="col-md-12">不, order只是在加了order类名的元素之间进行排序. 没加order类名的元素默认最高级且按照源文件里的顺序排序</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 order-2 main">
+        <h4>This is a title.</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur placeat quis nesciunt commodi! Quia
+          veritatis eligendi perspiciatis quaerat omnis vitae et illo facilis obcaecati. Temporibus animi, ipsam ea
+          expedita dolorum nam ad ab, recusandae rem, eligendi rerum pariatur dolor eveniet qui iusto? Maxime, earum
+          saepe molestias aliquid est sequi doloremque aliquam officiis illo deleniti ratione beatae vitae eaque minima
+          voluptate consequatur, in ut? Veniam dolorum aperiam, obcaecati blanditiis maiores neque aspernatur ullam odio
+          doloribus expedita, facere eius et esse. Accusamus consequatur, ut, officiis officia quia fugiat sit neque
+          dolor placeat minima minus fuga aliquam harum praesentium a consequuntur nam corporis?</p>
+      </div>
+      <div class="col-md-3 order-1 nav">
+        <ol>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+          <li>asdfasdfasd</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 order-2">1</div>
+      <div class="col-md-3">2</div>
+      <div class="col-md-3 order">3</div>
+      <div class="col-md-3 order-1">4</div>
+    </div>
+  </div>
+</body>
+
+</html>

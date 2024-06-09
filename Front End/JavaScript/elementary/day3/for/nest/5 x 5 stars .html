@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    /*     需求： 页面中打印出5行5列的星星
+    分析：
+    ①：利用双重for循环来做
+    ②：外层循环控制打印行，内层循环控制每行打印几个（列） */
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        document.write('☆ ')
+      }
+      document.write('<br>')
+    }
+  </script>
+</body>
+
+</html>

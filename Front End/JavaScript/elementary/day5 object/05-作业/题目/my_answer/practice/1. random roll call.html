@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 点名: 每次刷新网页运行, 在控制台 随机输出一位同学的名字 ["老赵", "老李", "小传", "小黑"]，如果输出了，则数组中删除这个名字
+    let arr = ["老赵", "老李", "小传", "小黑"]
+    while (arr.length) {
+      let randomIndex = Math.floor(Math.random() * arr.length)
+      console.log(randomIndex, arr[randomIndex]);
+      arr.splice(randomIndex, 1)
+      console.log(arr);
+    }
+  </script>
+</body>
+
+</html>

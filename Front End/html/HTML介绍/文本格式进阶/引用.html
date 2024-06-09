@@ -1,0 +1,35 @@
+<!--
+    主动学习：是谁说的？
+    到了主动学习的时间！在这个例子中我们想要你：
+    把中间的段落变成块引用，它要包含 cite 属性。√
+    把第三个段落的一部分变成行内引用，它要包含 cite 属性。√
+    将每一个引用源的标题包裹在 <cite> 标签中，并将它们链接到引用源中。√
+    http://www.brainyquote.com/quotes/authors/c/confucius.html 对应“孔子曰”。√
+    http://example.com/affirmationsforpositivethinking 对应“不要说泄气的话”。√
+-->
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html" target="_blank"><cite>孔子</cite></a>曰：
+    </p>
+
+    <blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+        <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
+    </blockquote>
+
+    <p>要保持乐观，
+        <q cite="http://example.com/affirmationsforpositivethinking">
+            不要说泄气的话
+        </q>
+        （源自 <a href="http://example.com/affirmationsforpositivethinking" target="_blank"><cite>Affirmations for Positive Thinking</cite></a>。）
+    </p>
+</body>
+</html>

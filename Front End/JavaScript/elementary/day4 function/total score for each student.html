@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 学生的分数是一个数组,计算每个学生的总分 (sum of array)
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    console.log(getSumOfArray(arr));
+
+    function getSumOfArray(arr = []) {
+      let sum = 0
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      return sum
+    }
+  </script>
+</body>
+
+</html>

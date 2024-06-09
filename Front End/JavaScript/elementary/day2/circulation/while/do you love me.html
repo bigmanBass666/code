@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*     需求：页面弹出对话框，‘你爱我吗’，如果输入‘爱’，则结束，否则一直弹出对话框分析：
+        ①：循环条件永远为真，一直弹出对话框
+        ②：循环的时候，重新让用户输入
+        ③：如果用户输入的是： 爱，则退出循环 （break） */
+        while (1) {
+          let doYouLoveMe = prompt('Do you love me? ( \'y\' or \'n\' )')
+          if (doYouLoveMe === 'y') {
+            alert('Love you too❤❤❤.')
+            break
+          }
+          // document.write('Again.<br>')
+        }
+  </script>
+</body>
+
+</html>

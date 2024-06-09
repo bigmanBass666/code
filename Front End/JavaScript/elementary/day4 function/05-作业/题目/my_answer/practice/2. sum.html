@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 封装函数, 名字为sum
+    // 2. 功能: 根据传入的两个数,求和并且返回求和的结果（函数必须有return返回值）
+    let a = 1
+    let b = 2
+    console.log(sum(a, b));
+    console.log(sum1(a, b));
+
+    function sum(a = 0, b = 0) {
+      return a + b
+    }
+
+    function sum1(a, b) {
+      // let a = a || 0  // 不用写let
+      // let b = b || 0  // 不用写let
+      a = a || 0
+      b = b || 0
+      return a + b
+    }
+  </script>
+</body>
+
+</html>

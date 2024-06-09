@@ -1,0 +1,14 @@
+{
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar",
+		"web/WEB-INF/lib/commons-dbcp2-2.9.0.jar",
+		"web/WEB-INF/lib/commons-fileupload-1.4.jar",
+		"web/WEB-INF/lib/commons-io-2.16.1.jar",
+		"web/WEB-INF/lib/commons-logging-1.2.jar",
+		"web/WEB-INF/lib/commons-pool2-2.11.1.jar",
+		"web/WEB-INF/lib/jstl.jar",
+		"web/WEB-INF/lib/mysql-connector-java-8.0.26.jar",
+		"web/WEB-INF/lib/servlet-api.jar",
+		"web/WEB-INF/lib/standard.jar"
+	]
+}

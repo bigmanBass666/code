@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 立即执行函数 (必须加分号)
+    (function () {
+      console.log('哈哈哈哈哈啊');
+    })();
+    (function () {
+      console.log('哈哈哈哈哈啊');
+    })();
+
+    // 另一种写法
+    (function () { }());
+
+    // 对比
+    (function () { })();
+    (function () { }());
+
+    // 传参
+    (function (a, b) {
+      console.log(a + b);
+    }(1, 2));
+  </script>
+</body>
+
+</html>

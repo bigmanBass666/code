@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应聘人员登记表</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="inputStyle.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="">
+            <div class="name inputBox">
+                <input type="text" id="name" required="required" autofocus>
+                <span>姓名:</span>
+                <i></i>
+            </div>
+            <div class="nativePlace inputBox">
+                <input type="text" id="nativePlace" required="required">
+                <span>籍贯: </span>
+                <i></i>
+            </div>
+            <div class="age inputBox">
+                <input type="number" id="age" required="required">
+                <span>年龄:</span>
+                <i></i>
+            </div>
+            <div class="birthday">
+                <label for="birthday">出生日期:</label>
+                <input type="date" name="birthday" id="birthday" require="required">
+            </div>
+            <div class="maritalStatus">
+                婚姻情况:
+                <input type="radio" name="maritalStatus" id="married" checked>
+                <label for="married">已婚</label>
+                <input type="radio" name="maritalStatus" id="unmarried">
+                <label for="unmarried">未婚</label>
+            </div>
+            <div class="gender">
+                性别:
+                <input type="radio" name="gender" id="male">
+                <label for="male">男</label>
+                <input type="radio" name="gender" id="female" checked>
+                <label for="female">女</label>
+                <div class="photo">
+                    <label for="photo">上传照片</label>
+                    <input type="file" name="photo" id="photo">
+                </div>
+            </div>
+            <div class="height inputBox">
+                <input type="number" id="height" name="height" min="0" step="1" required="required">
+                <span>身高（厘米）:</span>
+                <i></i>
+            </div>
+            <div class="weight inputBox">
+                <input type="number" id="weight" name="weight" min="0" step="0.1" required="required">
+                <span>体重（公斤）:</span>
+                <i></i>
+            </div>
+            <div class="job inputBox">
+                <input type="text" name="job" id="job" required="required">
+                <span>应征职务:</span>
+                <i></i>
+            </div>
+            <div class="desiredTreatment inputBox">
+                <input type="text" name="desiredTreatment" id="desiredTreatment" required="required">
+                <span>期望待遇:</span>
+                <i></i>
+            </div>
+            <div class="PermanentResidenceAddress inputBox">
+                <input type="text" name="PermanentResidenceAddress" id="PermanentResidenceAddress"
+                    required="required"></input>
+                <span for="PermanentResidenceAddress">户籍地址:</span>
+                <i></i>
+            </div>
+            <div class="phoneNumber inputBox">
+                <input type="number" name="phoneNumber" id="phoneNumber" required="required">
+                <span>电话号码:</span>
+                <i></i>
+            </div>
+            <div class="idNumber inputBox">
+                <input type="number" name="idNumber" id="idNumber" required="required">
+                <span>身份证号:</span>
+                <i></i>
+            </div>
+            <b></b>
+            <div class="highestEducation">
+                <label for="highestEducation">最高学历:</label>
+                <select name="highestEducation" id="highestEducation">
+                    <option value="">研究生</option>
+                    <option value="">本科</option>
+                    <option value="">大专</option>
+                </select>
+            </div>
+            <div class="graduationYear">
+                <label for="graduationYear">毕（肄）业年份:</label>
+                <input type="date" name="graduationyear" id="graduationyear">
+            </div>
+            <div class="place inputBox">
+                <input type="text" name="place" id="place" required="required">
+                <span>地点:</span>
+                <i></i>
+            </div>
+            <div class="workExperience">
+                <!-- <label for="workExperience">工作经历:</label> -->
+                <textarea name="workExperience" id="workExperience" placeholder="工作经历:" required="required"></textarea>
+            </div>
+            <div class="jobTitle inputBox">
+                <input type="text" name="jobTitle" id="jobTitle" required="required">
+                <span>职称:</span>
+                <i></i>
+            </div>
+            <div class="salary inputBox">
+                <input type="number" name="salary" id="salary" required="required">
+                <span>薪资待遇:</span>
+                <i></i>
+            </div>
+            <div class="startingEndingTime">
+                <label for="startingTime">起止时间:</label>
+                <input type="date" name="startingendingtime" id="startingtime"> ~
+                <input type="date" name="startingendingtime" id="endingtime">
+            </div>
+            <b></b>
+            <div class="familyStatus">
+                <div class="father">
+                    <div class="inputBox">
+                        <input type="text" name="father" id="father" required="required">
+                        <span>父:</span>
+                        <i></i>
+                    </div>
+                    <div class="profession inputBox">
+                        <input type="text" name="profession" id="profession" required="required">
+                        <span>职业:</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="mother">
+                    <div class="inputBox">
+                        <input type="text" name="mother" id="mother" required="required">
+                        <span>母:</span>
+                        <i></i>
+                    </div>
+                    <div class="profession inputBox">
+                        <input type="text" name="profession" id="profession" required="required">
+                        <span>职业:</span>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <b></b>
+            <div class="speciality">
+                <textarea name="speciality" id="speciality" cols="" rows="" placeholder="特长:"
+                    required="required"></textarea>
+            </div>
+            <div class="MilitaryService inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>服兵役情况:</span>
+                <i></i>
+            </div>
+            <div class="DecommissioningTime inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>退役时间:</span>
+                <i></i>
+            </div>
+            <div class="drivingLicense">
+                <textarea name="drivingLicense" id="drivingLicense" cols="" rows="" placeholder="汽车驾照:"
+                    required="required"></textarea>
+            </div>
+            <div class="hobbies">
+                <textarea name="hobbies" id="hobbies" cols="" rows="" placeholder="爱好:" required="required"></textarea>
+            </div>
+            <div></div>
+            <b></b>
+            <h2 class="languageTitle">语言掌握程度</h2>
+            <div class="chinese inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>汉语:</span>
+                <i></i>
+            </div>
+            <div class="french inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>法语:</span>
+                <i></i>
+            </div>
+            <div class="english inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>英语:</span>
+                <i></i>
+            </div>
+            <div class="japanese inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>日语:</span>
+                <i></i>
+            </div>
+            <div class="otherLanguages inputBox">
+                <input type="text" name="" id="" required="required">
+                <span>其他语言:</span>
+                <i></i>
+            </div>
+            <div></div>
+            <b></b>
+            <div class="instruction">
+                <textarea name="" id="" cols="" rows="" placeholder="批示:" required="required"></textarea>
+            </div>
+            <div class="suggestion">
+                <textarea name="" id="" cols="" rows="" placeholder="用人部门负责人意见:" required="required"></textarea>
+            </div>
+            <div class="trialDate">
+                <label for="trialDate">试用日期:</label>
+                <input type="date" name="trialdate" id="trialdate">
+            </div>
+            <b></b>
+            <h2>行政人事部意见</h2>
+            <div class="workingKnowledge">
+                工作知识:
+                <input type="radio" name="workingKnowledge" id="training">
+                <label for="training">训练</label>
+                <input type="radio" name="workingKnowledge" id="basicallyHave">
+                <label for="basicallyHave">基本具备</label>
+                <input type="radio" name="workingKnowledge" id="fullyUnderstanding">
+                <label for="fullyUnderstanding">充分认识</label>
+            </div>
+            <div class="lastWorkExperience">
+                工作经验:
+                <input type="radio" name="lastWorkExperience" id="inexperience">
+                <label for="inexperience">无经验</label>
+                <input type="radio" name="lastWorkExperience" id="expert">
+                <label for="expert">有经验（记录具体情况）</label>
+            </div>
+            <div class="attitude">
+                仪容态度:
+                <input type="radio" name="attitude" id="unimpressed">
+                <label for="unimpressed">印象坏</label>
+                <input type="radio" name="attitude" id="natural">
+                <label for="natural">平实</label>
+                <input type="radio" name="attitude" id="impressive">
+                <label for="impressive">印象深刻</label>
+            </div>
+            <div class="comprehension">
+                领悟反应:
+                <input type="radio" name="comprehension" id="slow">
+                <label for="slow">缓慢</label>
+                <input type="radio" name="comprehension" id="common">
+                <label for="common">普通</label>
+                <input type="radio" name="comprehension" id="great">
+                <label for="great">极好</label>
+            </div>
+            <div class="testPerformance inputBox">
+                <input type="number" name="" id="" required="required">
+                <span>测试成绩:</span>
+                <i></i>
+            </div>
+            <div class="buttonArea">
+                <input type="submit" value="SUBMIT">
+                <input type="reset" value="RESET">
+            </div>
+        </form>
+        <footer>
+            <p>Copyright © 2023 M&T</p>
+        </footer>
+    </div>
+</body>
+
+</html>

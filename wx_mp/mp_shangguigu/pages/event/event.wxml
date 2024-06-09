@@ -1,0 +1,33 @@
+<!-- pages/event/event.wxml -->
+<view class="note-item">
+  <view class="title">事件绑定和事件对象</view>
+  <view class="content">
+    <button type="primary" bind:tap="handler">button</button>
+    <input type="text" bindinput="getInputVal" />
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">事件分类以及阻止事件冒泡</view>
+  <view class="content-bgc">
+    <view class="catch" bind:tap="parentHandler">
+      <button bind:tap="btnHandler" data-method="bind">子组件(bind)</button>
+      <button catch:tap="btnHandler" data-method="catch">子组件(catch)</button>
+    </view>
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">事件传参-data-自定义数据</view>
+  <view class="content-bgc">
+    <view class="passing-param" bind:tap="passingParamParentHandler" data-name='parent'>
+      <button catch:tap="" data-name="child">data-param</button>
+    </view>
+  </view>
+</view>
+<view class="note-item">
+  <view class="title">事件传参-mark-自定义数据</view>
+  <view class="content-bgc">
+    <view class="passing-param" bind:tap="markParentHandler" mark:parentName="parent">
+      <button mark:childName="child">mark:param</button>
+    </view>
+  </view>
+</view>

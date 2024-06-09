@@ -1,0 +1,20 @@
+@import "../../app.scss";
+
+$note-bgc: #c8b5c8;
+
+input {
+    border: 1px solid #000;
+}
+
+.note-item {
+    .content-bgc {
+        @include content-bgc($note-bgc);
+        @include text-tag('父组件')
+    }
+}
+
+.catch {
+    button:first-child {
+        margin-bottom: 20rpx;
+    }
+}

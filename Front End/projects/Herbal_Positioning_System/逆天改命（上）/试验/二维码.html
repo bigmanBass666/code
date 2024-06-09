@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button with Hover Effect</title>
+	<style>
+		/* 按钮样式 */
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			border: 2px solid #999;
+			border-radius: 5px;
+			text-decoration: none;
+			color: #333;
+			font-size: 16px;
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease-in-out;
+            top: 50px;
+            z-index: 99;
+		}
+
+		/* 鼠标悬停时按钮样式 */
+		.button:hover {
+			background-color: #999;
+			color: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            overflow: visible;
+		}
+
+		/* 图片容器样式 */
+		.image-container {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			transform: translateY(80%);
+			transition: top 0.3s ease-in-out;
+            z-index: 0;
+		}
+
+		/* 图片动画效果 */
+		.button:hover .image-container {
+			top: -40px;
+		}
+
+		/* 图片样式 */
+		.image-container img {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- 按钮和图片容器 -->
+	<a href="#" class="button">Hover me!
+        <div class="shit">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/350x150" alt="placeholder image">
+            </div>
+        </div>
+	</a>
+
+</body>
+</html>

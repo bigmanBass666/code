@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+	"animations.CursorAnimationOptions": {"Color": "#D30102"},
+    "[python]": { // aaa
+        "editor.formatOnType": true
+    },
+    "files.autoSave": "afterDelay",
+    "notebook.lineNumbers": "on",
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.askForKernelRestart": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "files.autoSaveDelay": 50,
+    "editor.inlineSuggest.showToolbar": "always"
+}

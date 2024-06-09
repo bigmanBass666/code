@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：请把 ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操'] 随机显示一个名字到页面中分析：
+    // ①：利用随机函数随机生成一个数字作为索引号
+    // ②： 数组[随机数] 生成到页面中
+    let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+    for (let i = 0; i < arr.length; i++) {
+      console.log(getRandomEle(arr));
+    }
+
+    function getRandomEle(arr = []) {
+      let randomIndex = Math.floor(Math.random() * (arr.length))
+      return [randomIndex, arr[randomIndex]]
+    }
+  </script>
+</body>
+
+</html>

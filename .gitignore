@@ -1,0 +1,40 @@
+# 前端框架
+/Front End/framework
+
+# java Compiled class file
+**/*.class
+
+# jar
+**/*.jar
+
+# 图片
+**/*.png
+**/*.PNG
+**/*.img
+**/*.jpg
+**/*.bmp
+**/*.psd
+**/*.webp
+
+# 动图
+**/*.gif
+
+# 视频
+**/*.mp4
+**/*.avi
+**/*.flv
+**/*.f4v
+**/*.webm
+
+# 音乐
+**/*.mp3
+**/*.flac
+**/*.ogg
+
+# 压缩包
+**/*.zip
+**/*.rar
+**/*.tar
+**/*.7z
+**/*.gz
+**/*.bz2

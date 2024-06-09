@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <ol class="wrapper">
+    <li>
+      <p>立即执行函数前 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+      <!-- <button id="copyButton" onclick="copyToClipboard()">复制文本</button> -->
+    </li>
+    <li>
+      <p>强转成int: parseInt()</p>
+      <pre id="codeText">
+// let hours = Math.<span class="objectFunction">floor</span>(totalSeconds / 3600)
+let hours = <span class="globalFunction">parseInt</span>(totalSeconds / 3600)</pre>
+    </li>
+    <li>
+      <p>splice()删除指定元素 和 slice()切片不要弄混了</p>
+      <pre>
+// 点名: 每次刷新网页运行, 在控制台 随机输出一位同学的名字 ["老赵", "老李", "小传", "小黑"]，如果输出了，则数组中删除这个名字
+let arr = ["老赵", "老李", "小传", "小黑"]
+while (arr.length) {
+  let randomIndex = Math.floor(Math.random() * arr.length)
+  console.log(randomIndex, arr[randomIndex]);
+  arr.<span class="objectFunction">splice</span>(randomIndex, 1)
+  console.log(arr);
+}
+      </pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+    <li>
+      <p>立即执行函数 ( 必须加分号 )</p>
+      <pre id="codeText">
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();  
+(function () {
+  console.log('哈哈哈哈哈啊');
+})();</pre>
+    </li>
+  </ol>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

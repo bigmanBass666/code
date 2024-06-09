@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.theta.mapper.BrandMapper">
+
+  <resultMap type="Brand" id="brandResultMap">
+    <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+  </resultMap>
+
+  <!-- selectAll -->
+
+  <select id="selectAll" resultMap="brandResultMap">
+		select * from tb_Brand;
+  </select>
+
+  <!-- add -->
+
+  <insert id="add">
+		insert into
+      tb_Brand(id, brand_name, company_name, ordered, description, status)
+      values(null, #{brandName}, #{companyName}, #{ordered}, #{description}, #{status})
+  </insert>
+
+  <!-- deleteByIds -->
+
+  <delete id="deleteByIds">
+    delete from tb_brand where id in
+    <foreach collection="ids" item="id" separator="," open="(" close=")">
+      #{id}
+    </foreach>
+  </delete>
+
+  <!-- selectByPage -->
+
+  <select id="selectByPage" resultMap="brandResultMap">
+    select * from tb_brand limit #{begin}, #{size};
+  </select>
+
+  <!-- selectTotalCount -->
+
+  <select id="selectTotalCount">
+    select count(*) from tb_brand;
+  </select>
+
+  <!-- deleteById -->
+
+  <select id="deleteById">
+    delete from tb_brand where id = #{id};
+  </select>
+
+  <!-- update -->
+
+  <update id="update">
+    update tb_brand
+    <set>
+      <if test="brandName != null and brandName != '' ">
+        brand_name = #{brandName}
+      </if>
+      <if test="companyName != null and companyName != '' ">
+        company_name = #{companyName}
+      </if>
+      <if test="ordered != null">
+        ordered = #{ordered}
+      </if>
+      <if test="description != null and description != '' ">
+        description = #{description}
+      </if>
+      <if test="status != null">
+        status = #{status}
+      </if>
+    </set>
+    where id = #{id};
+  </update>
+
+  <!-- selectById -->
+
+  <select id="selectById" resultMap="brandResultMap">
+    select * from tb_brand where id = #{id};
+  </select>
+</mapper>

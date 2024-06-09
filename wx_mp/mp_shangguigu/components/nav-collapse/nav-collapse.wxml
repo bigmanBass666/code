@@ -1,0 +1,12 @@
+<view class="nav-collapse {{isCollapsed ? '' : 'bs-shadow focus-fill'}}">
+  <view class="nav-header {{isCollapsed ? 'collapsed' : ''}}" bind:tap="toggleBody">
+    <text class="headerText">{{header}}</text>
+    <text class="iconfont icon-arrow-d"></text>
+  </view>
+  <view class="nav-body">
+    <navigator class="nav-item" wx:for="{{navigatorInfo}}" wx:key="id" url="{{item.url}}" open-type="{{ item.openType }}">
+      <text class="iconfont icon-circle-fill"></text>
+      <text class="navigatorText">{{item.navigatorText}}</text>
+    </navigator>
+  </view>
+</view>

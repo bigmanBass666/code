@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var a_student = [
+      { name: "张三", age: 18 },
+      { name: "李四", age: 19 },
+      { name: "王五", age: 16 },
+      { name: "甲六", age: 19 },
+      { name: "李逵", age: 15 },
+      { name: "宋江", age: 25 }];
+
+    //请求出数组元素的长度
+    console.log(a_student.length);
+
+    //请求出年龄<18岁的人数；
+    let count = 0;
+    for (let i = 0; i < a_student.length; i++) {
+      // console.log(a_student[i].age);
+      if (a_student[i].age < 18) {
+        count++
+      }
+    }
+    console.log(count);
+    
+    //请求出age的和；
+    let sum = 0
+    for (let i = 0; i < a_student.length; i++) {
+      sum += a_student[i].age
+    }
+    console.log(sum);
+  </script>
+</body>
+
+</html>

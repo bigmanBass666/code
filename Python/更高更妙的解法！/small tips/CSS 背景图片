@@ -1,0 +1,7 @@
+你也可以使用 CSS 把图片嵌入网站中（JavaScript 也行，不过那是另外一个故事了），
+这个 CSS 属性 background-image 和另其他 background-* 属性是用来放置背景图片的。
+比如，为页面中的所有段落设置一个背景图片，你可以这样做：
+
+p {
+  background-image: url("images/dinosaur.jpg");
+}
