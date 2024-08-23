@@ -42,10 +42,6 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-
-* {
-  cursor: none !important;
-}
 ```
 
 > edition 1: 2024  May 12  Sunday  01:08

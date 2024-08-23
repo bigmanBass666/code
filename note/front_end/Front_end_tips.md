@@ -220,6 +220,16 @@ letter-spacing: .5em;
 }
 ```
 
+11. `aspect-ratio` CSS 属性定义元素的长宽比。它允许您定义元素的长宽比，而不需要指定宽度和高度的值。
+
+```css
+.aspect-ratio {
+  aspect-ratio: 16 / 9;
+}
+```
+
+> 2024  June 25  Tuesday  00:37
+
 # HTML
 
 1. 设置 svg 图标颜色为当前字体颜色

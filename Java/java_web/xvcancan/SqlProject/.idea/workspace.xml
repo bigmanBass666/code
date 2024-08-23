@@ -91,28 +91,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat 服务器.Tomcat 8.5.68.executor": "Run",
-    "Tomcat 服务器.Tomcat 9.0.86.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/melon/Code/Java/java_web/xvcancan/SqlProject/web/WEB-INF/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.DBCPTest.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat 服务器.Tomcat 8.5.68.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat 服务器.Tomcat 9.0.86.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/melon/Code/Java/java_web/xvcancan/SqlProject/web/WEB-INF/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.DBCPTest.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\melon\Code\Java\java_web\xvcancan\SqlProject\web\WEB-INF\lib" />
@@ -228,8 +228,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat 服务器.Tomcat 8.5.68" />
       <item itemvalue="应用程序.DBCPTest" />
+      <item itemvalue="Tomcat 服务器.Tomcat 8.5.68" />
     </list>
     <recent_temporary>
       <list>
@@ -268,6 +268,7 @@
       <workItem from="1717608241818" duration="575000" />
       <workItem from="1717691056347" duration="5798000" />
       <workItem from="1717700829115" duration="5953000" />
+      <workItem from="1719216845447" duration="2000" />
     </task>
     <servers />
   </component>

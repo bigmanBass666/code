@@ -1,6 +1,3 @@
-# 前端框架
-/Front End/framework
-
 # java Compiled class file
 **/*.class
 
@@ -39,4 +36,11 @@
 **/*.gz
 **/*.bz2
 
-Front End/projects/*
+# 前端项目
+Front End/projects
+
+# 前端框架
+Front End/framework
+
+# 文档网站
+docs-website

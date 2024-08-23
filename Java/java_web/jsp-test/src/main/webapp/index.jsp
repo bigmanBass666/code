@@ -7,5 +7,13 @@
 		<%
 			System.out.println("index...");
 		%>
+
+        <%
+            int a = 5;
+            request.setAttribute("a","4");
+            session.setAttribute("a","6");
+        %>  
+        <c:out value="${a}"/>
+
     </body>
 </html>
