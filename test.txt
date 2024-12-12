@@ -49,3 +49,6 @@ git config --global user.email '1619649679@qq.com'
 
 git config --global user.name '402'
 git config --global user.email '1619649679@qq.com'
+
+git config --global user.name '402'
+git config --global user.email '3858351104@qq.com'
